@@ -24,6 +24,20 @@ import naweldElectrodeBNMImg from "@/assets/electrode-bnm.png";
 import naweldElectrodeBImg from "@/assets/electrode-b.png";
 import naweldElectrodeTiCImg from "@/assets/electrode-tic.png";
 
+// Helper function to create URL-friendly slugs
+const getSubProductSlug = (name: string): string => {
+  return name
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/ğ/g, 'g')
+    .replace(/ü/g, 'u')
+    .replace(/ş/g, 's')
+    .replace(/ı/g, 'i')
+    .replace(/ö/g, 'o')
+    .replace(/ç/g, 'c')
+    .replace(/[^a-z0-9-]/g, '');
+};
+
 const Products: React.FC = () => {
   const products = [
     {
@@ -183,7 +197,7 @@ const Products: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {product.subProducts.map((subProduct, subIndex) => (
                     <Link
-                      to={`/product/${product.id === 1 ? 'toz-kaynak-teli' : product.id === 2 ? 'asinmaya-dayanikli-plaka' : 'toz-kaplamali-el-elektrodu'}/${subProduct.name.toLowerCase().replace(/\s+/g, '-').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ç/g, 'c')}`}
+                      to={`/product/${product.id === 1 ? 'toz-kaynak-teli' : product.id === 2 ? 'asinmaya-dayanikli-plaka' : 'toz-kaplamali-el-elektrodu'}/${getSubProductSlug(subProduct.name)}`}
                       key={subIndex}
                       className="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-3 transition-all duration-300 block"
                     >

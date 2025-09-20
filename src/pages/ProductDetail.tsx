@@ -203,7 +203,7 @@ const ProductDetail: React.FC = () => {
       title: "Aşınmaya Dayanıklı Plaka",
       description: "Endüstriyel uygulamalar için ultra dayanıklı aşınma önleyici plakalar",
       subProducts: {
-        "ultralight-67t": {
+        "nawel-plate-ultralight-67t": {
           name: "NAWEL Plate UltraLight 67T",
           description: "Genel amaçlı aşınma direnci için optimize edilmiş plaka",
           detailedDescription: "NAWEL Plate UltraLight 67T, genel endüstriyel uygulamalarda mükemmel aşınma direnci sağlayan ekonomik çözümdür. Orta seviye sertlik değerleri ile kolay işlenebilirlik özelliklerini birleştiren bu plaka, geniş kullanım alanına sahiptir.",
@@ -231,7 +231,7 @@ const ProductDetail: React.FC = () => {
             "Tarım ekipmanları"
           ]
         },
-        "ultrahard-67t": {
+        "nawel-plate-ultrahard-67t": {
           name: "NAWEL Plate Ultrahard 67T",
           description: "Ağır aşınma koşulları için yüksek sertlik değerli plaka",
           detailedDescription: "NAWEL Plate Ultrahard 67T, ağır aşınma koşullarında üstün performans gösteren yüksek sertlik değerli plakadır. Zorlu endüstriyel uygulamalarda uzun servis ömrü sağlayan bu ürün, maliyet etkin çözümler sunar.",
@@ -259,7 +259,7 @@ const ProductDetail: React.FC = () => {
             "Kırma ve öğütme sistemleri"
           ]
         },
-        "ultralight-65": {
+        "nawel-plate-ultralight-65": {
           name: "NAWEL Plate UltraLight 65",
           description: "Hafif uygulamalar için optimize edilmiş aşınma dirençli plaka",
           detailedDescription: "NAWEL Plate UltraLight 65, hafif ve orta seviye aşınma koşulları için özel olarak geliştirilmiş plakadır. Düşük ağırlık ve iyi işlenebilirlik özellikleri ile pratik çözümler sunar.",
@@ -287,7 +287,7 @@ const ProductDetail: React.FC = () => {
             "Genel makine imalatı"
           ]
         },
-        "ultrahard-65": {
+        "nawel-plate-ultrahard-65": {
           name: "NAWEL Plate Ultrahard 65",
           description: "Yüksek performans gerektiren uygulamalar için ultra sert plaka",
           detailedDescription: "NAWEL Plate Ultrahard 65, en zorlu aşınma koşullarında bile üstün performans gösteren ultra sert plakadır. Yüksek sertlik değerleri ve mükemmel aşınma direnci ile kritik uygulamalarda tercih edilir.",
@@ -315,7 +315,7 @@ const ProductDetail: React.FC = () => {
             "Ekstrem koşullar"
           ]
         },
-        "ultrahard-70t": {
+        "nawel-plate-ultrahard-70t": {
           name: "NAWEL Plate Ultrahard 70T",
           description: "En zorlu koşullar için maksimum sertlik değerli plaka",
           detailedDescription: "NAWEL Plate Ultrahard 70T, maksimum sertlik değerleri ile en zorlu endüstriyel koşullarda bile üstün performans gösteren premium plakadır. Ekstrem aşınma direnci ve yüksek darbe dayanımı ile kritik uygulamalarda tercih edilir.",
@@ -349,7 +349,7 @@ const ProductDetail: React.FC = () => {
       title: "Toz Kaplamalı El Elektrodu",
       description: "Profesyonel kaynak uygulamaları için yüksek performanslı elektrodlar",
       subProducts: {
-        "electrode-nbs": {
+        "nawel-tubular-electrode-nbs": {
           name: "Nawel Tubular Electrode NBS",
           description: "Başlangıç seviyesi için ideal genel amaçlı elektrod",
           detailedDescription: "Nawel Tubular Electrode NBS, başlangıç seviyesindeki kaynak operatörleri için özel olarak geliştirilmiş kullanıcı dostu elektrodtur. Kolay tutuşma, stabil ark ve temiz kaynak dikişi özellikleri ile öğrenme sürecini kolaylaştırır.",
@@ -377,7 +377,7 @@ const ProductDetail: React.FC = () => {
             "Hafif yapı çeliği kaynağı"
           ]
         },
-        "electrode-c": {
+        "nawel-tubular-electrode-c": {
           name: "Nawel Tubular Electrode C",
           description: "Kritik kaynak işleri için düşük hidrojen içerikli elektrod",
           detailedDescription: "Nawel Tubular Electrode C, kritik kaynak uygulamaları için özel olarak geliştirilmiş düşük hidrojen içerikli elektrodtur. Yüksek kalite gerektiren projelerde çatlak riski olmadan güvenli kaynak sağlar.",
@@ -405,7 +405,7 @@ const ProductDetail: React.FC = () => {
             "Yüksek mukavemet gereken yerler"
           ]
         },
-        "electrode-bnm": {
+        "nawel-tubular-electrode-bnm": {
           name: "Nawel Tubular Electrode BNM",
           description: "Paslanmaz çelik kaynak elektrodu, 316L uyumlu",
           detailedDescription: "Nawel Tubular Electrode BNM, paslanmaz çelik kaynak uygulamaları için özel olarak geliştirilmiş elektrodtur. 316L alaşım uyumluluğu ile mükemmel korozyon direnci ve kaynak kalitesi sağlar.",
@@ -433,7 +433,7 @@ const ProductDetail: React.FC = () => {
             "İlaç sanayi"
           ]
         },
-        "electrode-b": {
+        "nawel-tubular-electrode-b": {
           name: "Nawel Tubular Electrode B",
           description: "Karbon-paslanmaz çelik birleştirme için özel elektrod",
           detailedDescription: "Nawel Tubular Electrode B, karbon çelik ile paslanmaz çelik arasında kaynak yapmak için özel olarak geliştirilmiş elektrodtur. Farklı malzeme özelliklerini başarıyla birleştiren bu elektrod, hibrit uygulamalarda tercih edilir.",
@@ -461,7 +461,7 @@ const ProductDetail: React.FC = () => {
             "Farklı malzeme kombinasyonları"
           ]
         },
-        "electrode-tic": {
+        "nawel-tubular-electrode-tic": {
           name: "Nawel Tubular Electrode TiC",
           description: "Aşınma direnci için özel elektrod, yüksek sertlik değerleri",
           detailedDescription: "Nawel Tubular Electrode TiC, titanium karbür takviyeli özel elektrodtur. Ekstrem aşınma koşullarında üstün performans gösteren bu elektrod, yüksek sertlik değerleri ile uzun servis ömrü sağlar.",
