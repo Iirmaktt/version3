@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Shield, Lightbulb, Users, Award, Target } from 'lucide-react';
+import { ArrowRight, Zap, Shield, Lightbulb, Users, Award, Target, BookOpen, Cog, GraduationCap, Flame, Wrench } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
 import resim4 from "../assets/resim4.jpg"; // 
+import nawelImg from "@/assets/nawel-cast.jpg";
+import nawelAbrasionImg from "@/assets/nawel-abrasion.jpg";
+import naweldElectrodeNBSImg from "@/assets/electrode-nbs.png";
 
 const Home: React.FC = () => {
   const features = [
@@ -23,21 +26,54 @@ const Home: React.FC = () => {
     }
   ];
 
+  const products = [
+    {
+      id: 1,
+      title: "Toz Kaynak Teli",
+      description: "Nano yapılı çelik esaslı toz dolgulu kaynak telleri, yüksek mukavemet ve mükemmel kaynak kalitesi sunar.",
+      image: nawelImg,
+      path: "/products#toz-kaynak-teli"
+    },
+    {
+      id: 2,
+      title: "Aşınmaya Dayanıklı Plaka",
+      description: "Endüstriyel uygulamalar için ultra dayanıklı aşınma önleyici plakalar, uzun ömür garantisi.",
+      image: nawelAbrasionImg,
+      path: "/products#asinmaya-dayanikli-plaka"
+    },
+    {
+      id: 3,
+      title: "Toz Kaplamalı El Elektrodu",
+      description: "Profesyonel kaynak uygulamaları için yüksek performanslı elektrodlar, stabil ark özelliği.",
+      image: naweldElectrodeNBSImg,
+      path: "/products#toz-kaplamali-el-elektrodu"
+    }
+  ];
+
   const services = [
     {
-      title: "Kılavuz",
-      description: "Eğitim dosyaları ve kapsamlı ürün seçim kılavuzunu indirin",
-      image: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg"
+      id: 1,
+      title: "Danışmanlık Hizmetleri",
+      description: "Malzeme seçimi, süreç optimizasyonu ve hata analizi konularında uzman danışmanlık hizmetleri sunuyoruz.",
+      icon: <BookOpen className="w-8 h-8" />,
+      image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+      path: "/danismanlik"
     },
     {
-      title: "Ürünler",
-      description: "Çeşitli toz dolgulu kaynak telleri ve aşınmaya dayanıklı plakalar,Namad İleri Nano Yapılı Malzeme Teknoloji Geliştirme Şirketi ürünleri",
-      image: "https://images.pexels.com/photos/159298/science-chemistry-lab-laboratory-159298.jpeg"
+      id: 2,
+      title: "Kaynak Hizmetleri",
+      description: "Profesyonel kaynak işleri ve özel üretim çözümleri ile projelerinizi hayata geçiriyoruz.",
+      icon: <Cog className="w-8 h-8" />,
+      image: "https://images.pexels.com/photos/2280568/pexels-photo-2280568.jpeg",
+      path: "/kaynak-hizmetleri"
     },
     {
-      title: "Sertifikalar",
-      description: "Ürün onay sertifikaları",
-      image: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg"
+      id: 3,
+      title: "Symbol Akademi",
+      description: "Kaynak teknolojileri ve endüstriyel beceri geliştirme alanında kapsamlı eğitim programları.",
+      icon: <GraduationCap className="w-8 h-8" />,
+      image: "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg",
+      path: "/symbol-akademi"
     }
   ];
 
@@ -112,38 +148,44 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Preview */}
+      {/* Products Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Ürün ve <span className="text-blue-800">Çözümlerimiz</span>
+              <span className="text-blue-800">Ürünlerimiz</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              İleri nanoteknoloji ürünlerimiz ile endüstrilerin geleceğini şekillendiriyoruz
+              Nano yapılı çelik esaslı toz dolgulu kaynak telleri ve aşınmaya dayanıklı plakalar üretiyoruz.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {products.map((product, index) => (
               <div 
                 key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500"
+                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden"
               >
-                <div 
-                  className="h-64 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                  style={{ backgroundImage: `url(${service.image})` }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-800 transition-colors duration-300">
+                    {product.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                    {product.description}
+                  </p>
                   <Link
-                    to="/products"
-                    className="inline-flex items-center text-blue-300 hover:text-blue-200 font-medium"
+                    to={product.path}
+                    className="inline-flex items-center px-4 py-2 bg-blue-800 text-white text-sm font-medium rounded-lg hover:bg-blue-900 transform hover:scale-105 transition-all duration-300"
                   >
-                    Detayları Gör
+                    Detay
                     <ArrowRight className="ml-1 w-4 h-4" />
                   </Link>
                 </div>
@@ -154,9 +196,69 @@ const Home: React.FC = () => {
           <div className="text-center mt-12">
             <Link
               to="/products"
-              className="inline-flex items-center px-6 py-3 bg-blue-800 text-white font-semibold rounded-lg hover:bg-blue-900 transform hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 bg-blue-800 text-white font-semibold rounded-full hover:bg-blue-900 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Tüm Ürünleri Görüntüle
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <span className="text-blue-800">Hizmetlerimiz</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Danışmanlık, kaynak hizmetleri ve Symbol Akademi eğitimleri sunuyoruz.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div 
+                key={index}
+                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 overflow-hidden"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-blue-800 p-3 rounded-full group-hover:bg-blue-800 group-hover:text-white transition-all duration-300">
+                    {service.icon}
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-800 transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <Link
+                    to={service.path}
+                    className="inline-flex items-center px-4 py-2 bg-blue-800 text-white text-sm font-medium rounded-lg hover:bg-blue-900 transform hover:scale-105 transition-all duration-300"
+                  >
+                    Detay
+                    <ArrowRight className="ml-1 w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-4 bg-blue-800 text-white font-semibold rounded-full hover:bg-blue-900 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Tüm Hizmetleri Görüntüle
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
