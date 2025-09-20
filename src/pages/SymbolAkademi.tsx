@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Award, BookOpen, Clock, CheckCircle, GraduationCap } from 'lucide-react';
 import consultationImg from '@/assets/headway-5QgIuuBxKwM-unsplash.jpg';
+import businessBgImg from '@/assets/business-meeting-bg.jpg';
 import certificateProgramImg from "../assets/resim2.jpg"; // relative path
 
 const SymbolAkademi: React.FC = () => {
@@ -82,8 +83,8 @@ const SymbolAkademi: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 text-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-15"
-          style={{ backgroundImage: `url(${consultationImg})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: `url(${businessBgImg})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/85 via-blue-800/75 to-black/85"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -171,8 +172,8 @@ const SymbolAkademi: React.FC = () => {
       {/* CTA Section */}
       <section className="relative py-20 bg-gray-900 text-white text-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url(${consultationImg})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-12"
+          style={{ backgroundImage: `url(${businessBgImg})` }}
         ></div>
         <div className="absolute inset-0 bg-gray-900/90"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

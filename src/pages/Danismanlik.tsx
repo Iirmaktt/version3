@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, CheckCircle, Users, Award, Target, Lightbulb } from 'lucide-react';
 import consultationImg from '@/assets/headway-5QgIuuBxKwM-unsplash.jpg';
+import businessBgImg from '@/assets/business-meeting-bg.jpg';
 import resim3 from "../assets/resim3.jpg";
 
 const Danismanlik: React.FC = () => {
@@ -76,8 +77,8 @@ const Danismanlik: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${consultationImg})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-25"
+          style={{ backgroundImage: `url(${businessBgImg})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-black/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -255,8 +256,8 @@ const Danismanlik: React.FC = () => {
       {/* CTA Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-800 to-blue-900 text-white overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-10"
-          style={{ backgroundImage: `url(${consultationImg})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-12"
+          style={{ backgroundImage: `url(${businessBgImg})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-800/90 to-blue-900/90"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

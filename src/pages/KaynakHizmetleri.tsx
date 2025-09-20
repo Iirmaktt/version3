@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import industrialWorkerImg from '@/assets/call-me-lamb-aLWgHZ1PC0o-unsplash.jpg';
+import industrialBgImg from '@/assets/industrial-worker-bg.jpg';
 
 const KaynakHizmetleri: React.FC = () => {
   const successfulProjects = [
@@ -64,8 +65,8 @@ const KaynakHizmetleri: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-25"
-          style={{ backgroundImage: `url(${industrialWorkerImg})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: `url(${industrialBgImg})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/75 via-blue-800/65 to-black/75"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,8 +155,8 @@ const KaynakHizmetleri: React.FC = () => {
       {/* CTA Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-800 to-blue-900 text-white overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-15"
-          style={{ backgroundImage: `url(${industrialWorkerImg})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-18"
+          style={{ backgroundImage: `url(${industrialBgImg})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-800/85 to-blue-900/85"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

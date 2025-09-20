@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import consultationImg from '@/assets/headway-5QgIuuBxKwM-unsplash.jpg';
+import businessBgImg from '@/assets/business-meeting-bg.jpg';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -88,8 +89,8 @@ const Contact: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${consultationImg})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-25"
+          style={{ backgroundImage: `url(${businessBgImg})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-black/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

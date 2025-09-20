@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 
 import industrialWorkerImg from '@/assets/call-me-lamb-aLWgHZ1PC0o-unsplash.jpg';
+import industrialBgImg from '@/assets/industrial-worker-bg.jpg';
 import nawelImg from "@/assets/nawel-cast.jpg";
 import nawelToolImg from "@/assets/nawel-tool.png";
 import nawelCorrosionImg from "@/assets/nawel-corrosion.png";
@@ -113,8 +114,8 @@ const Products: React.FC = () => {
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${industrialWorkerImg})` }}
+          className="absolute inset-0 bg-cover bg-center opacity-25"
+          style={{ backgroundImage: `url(${industrialBgImg})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-black/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -213,15 +214,22 @@ const Products: React.FC = () => {
 
       {/* Application Areas */}
       <section className="py-20 bg-white">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-5"
+          style={{ backgroundImage: `url(${industrialBgImg})` }}
+        ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+          <div className="relative z-10">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Uygulama <span className="text-blue-800">Alanları</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ürünlerimiz çeşitli endüstrilerde geniş uygulama alanı bulur
           </p>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {applications.map((app, index) => (
             <div
               key={index}
@@ -236,6 +244,7 @@ const Products: React.FC = () => {
               <p className="text-gray-700">{app.description}</p>
             </div>
           ))}
+          </div>
         </div>
       </section>
     </div>
