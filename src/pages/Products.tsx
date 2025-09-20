@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   ArrowRight, Layers, Cpu, Atom, Microscope,
   Settings, Zap, Shield, Wrench, Flame
@@ -181,18 +182,20 @@ const Products: React.FC = () => {
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {product.subProducts.map((subProduct, subIndex) => (
-                    <div
+                    <Link
+                      to={`/product/${product.id === 1 ? 'toz-kaynak-teli' : product.id === 2 ? 'asinmaya-dayanikli-plaka' : 'toz-kaplamali-el-elektrodu'}/${subProduct.name.toLowerCase().replace(/\s+/g, '-').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ç/g, 'c')}`}
                       key={subIndex}
-                      className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-2 transition-all duration-300"
+                      className="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-3 transition-all duration-300 block"
                     >
-                      <div className="overflow-hidden rounded-lg mb-4">
+                      <div className="overflow-hidden rounded-lg mb-4 relative">
                         <img
                           src={subProduct.image}
                           alt={subProduct.name}
-                          className="w-full h-40 object-cover"
+                          className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
-                      <h5 className="text-lg font-semibold text-gray-900 mb-3">
+                      <h5 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-800 transition-colors duration-300">
                         {subProduct.name}
                       </h5>
                       <p className="text-gray-600 mb-4 text-sm">
@@ -203,7 +206,13 @@ const Products: React.FC = () => {
                           {subProduct.specs}
                         </p>
                       </div>
-                    </div>
+                      <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="inline-flex items-center text-blue-800 font-medium text-sm">
+                          Detayları Gör
+                          <ArrowRight className="ml-1 w-4 h-4" />
+                        </div>
+                      </div>
+                    </Link>
                   ))}
                 </div>
               </div>

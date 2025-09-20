@@ -10,6 +10,7 @@ import KaynakHizmetleri from './pages/KaynakHizmetleri';
 import SymbolAkademi from './pages/SymbolAkademi';
 import News from './pages/News';
 import Contact from './pages/Contact';
+import ProductDetail from './pages/ProductDetail';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/symbol-akademi" element={<SymbolAkademi />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/product/:productId/:subproductId" element={<ProductDetail />} />
         </Routes>
         <Footer />
       </div>
