@@ -25,18 +25,18 @@ const Home: React.FC = () => {
 
   const services = [
     {
-      title: "Nano Yüzey Kaplamalar",
-      description: "Tıbbi ve endüstriyel kullanım için gelişmiş nano kaplama çözümleri",
+      title: "Kılavuz",
+      description: "Eğitim dosyaları ve kapsamlı ürün seçim kılavuzunu indirin",
       image: "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg"
     },
     {
-      title: "Kuantum Sensörler",
-      description: "Kuantum tabanlı ultra hassas algılama sistemleri",
+      title: "Ürünler",
+      description: "Çeşitli toz dolgulu kaynak telleri ve aşınmaya dayanıklı plakalar,Namad İleri Nano Yapılı Malzeme Teknoloji Geliştirme Şirketi ürünleri",
       image: "https://images.pexels.com/photos/159298/science-chemistry-lab-laboratory-159298.jpeg"
     },
     {
-      title: "Akıllı Nano Malzemeler",
-      description: "Enerji, sağlık ve savunma uygulamaları için uyarlanabilir malzemeler",
+      title: "Sertifikalar",
+      description: "Ürün onay sertifikaları",
       image: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg"
     }
   ];
@@ -172,13 +172,11 @@ const Home: React.FC = () => {
                 Hakkımızda
               </h2>
               <p className="text-lg text-blue-100 mb-6 leading-relaxed">
-                NamadNanoTech, nanoteknoloji alanında yüksek katma değerli çözümler sunan öncü bir teknoloji firmasıdır. 
-                Araştırma ve geliştirme odaklı yaklaşımımızla, endüstriyel uygulamalardan tıbbi teknolojilere kadar 
-                geniş bir yelpazede inovatif çözümler üretiyoruz.
+              Namad Teknoloji Geliştirme Şirketi, 2009 yılında  Nanoteknoloji Geliştirme Özel Kurulu’nun desteğiyle kurulmuştur. Şirketin temel amacı, malzeme ile ilgili teknolojilerin ve bu teknolojilere ait ekipmanların oluşturulması ve geliştirilmesine katkı sağlamaktır. Günümüzde ana faaliyet alanı, nano yapılı çelikler temelinde toz dolgulu kaynak tellerinin geliştirilmesi ve üretimidir.
               </p>
               <p className="text-lg text-blue-100 mb-8 leading-relaxed">
-                Uzman ekibimiz, en son teknolojik gelişmeleri takip ederek müşterilerimize özelleştirilmiş, 
-                yüksek performanslı nanoteknoloji ürünleri sunmaktadır.
+              Namad, metalurji endüstrisinde nanoteknolojiye dayalı ürünlerin araştırma ve geliştirilmesinde uzmanlaşmıştır. Şirketin önemli çalışma konularından biri, mevcut pazardaki ürünlere kıyasla çok daha yüksek aşınma direncine sahip son derece sert alaşımların tasarlanmasıdır. Bu sayede endüstriyel 
+              parçaların ömrünü uzatmak için sert kaplama  katmanları oluşturulmaktadır.
               </p>
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-center">
