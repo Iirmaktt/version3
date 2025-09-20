@@ -544,7 +544,7 @@ const ProductDetail: React.FC = () => {
             {/* Product Image */}
             <div className="relative">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <img
+                < img style ={{objectFit: 'contain'}}
                   src={currentSubProduct.image}
                   alt={currentSubProduct.name}
                   className="w-full h-96 object-cover"

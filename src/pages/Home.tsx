@@ -6,6 +6,9 @@ import resim4 from "../assets/resim4.jpg"; //
 import nawelImg from "@/assets/nawel-cast.jpg";
 import nawelAbrasionImg from "@/assets/nawel-abrasion.jpg";
 import naweldElectrodeNBSImg from "@/assets/electrode-nbs.png";
+import foto1 from "@/assets/foto1.jpg";
+import foto2 from "@/assets/foto2.jpg";
+import foto3 from "@/assets/foto3.jpg";
 
 const Home: React.FC = () => {
   const features = [
@@ -56,7 +59,7 @@ const Home: React.FC = () => {
       title: "Danışmanlık Hizmetleri",
       description: "Malzeme seçimi, süreç optimizasyonu ve hata analizi konularında uzman danışmanlık hizmetleri sunuyoruz.",
       icon: <BookOpen className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+      image: foto1,
       path: "/danismanlik"
     },
     {
@@ -64,7 +67,7 @@ const Home: React.FC = () => {
       title: "Kaynak Hizmetleri",
       description: "Profesyonel kaynak işleri ve özel üretim çözümleri ile projelerinizi hayata geçiriyoruz.",
       icon: <Cog className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/2280568/pexels-photo-2280568.jpeg",
+      image: foto2,
       path: "/kaynak-hizmetleri"
     },
     {
@@ -72,7 +75,7 @@ const Home: React.FC = () => {
       title: "Symbol Akademi",
       description: "Kaynak teknolojileri ve endüstriyel beceri geliştirme alanında kapsamlı eğitim programları.",
       icon: <GraduationCap className="w-8 h-8" />,
-      image: "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg",
+      image: foto3,
       path: "/symbol-akademi"
     }
   ];
@@ -167,7 +170,7 @@ const Home: React.FC = () => {
                 className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <img style={{objectFit: 'contain'}}
                     src={product.image}
                     alt={product.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

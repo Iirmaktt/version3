@@ -184,7 +184,7 @@ const News: React.FC = () => {
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden"
               >
                 <div className="relative">
-                  <img 
+                  <img style={{objectFit: 'cover'}}
                     src={article.image}
                     alt={article.title}
                     className="w-full h-48 object-cover"

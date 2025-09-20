@@ -23,6 +23,11 @@ import naweldElectrodeCImg from "@/assets/electrode-c.png";
 import naweldElectrodeBNMImg from "@/assets/electrode-bnm.png";
 import naweldElectrodeBImg from "@/assets/electrode-b.png";
 import naweldElectrodeTiCImg from "@/assets/electrode-tic.png";
+import foto7 from "@/assets/foto7.jpg";
+import foto10 from "@/assets/foto10.jpg";
+import foto9 from "@/assets/foto9.jpeg";
+
+
 
 // Helper function to create URL-friendly slugs
 const getSubProductSlug = (name: string): string => {
@@ -62,7 +67,7 @@ const Products: React.FC = () => {
         { name: "NAWEL TUNGSTEN CARBİDE", description: "Yüksek mukavemet gerektiren uygulamalar", specs: "Çap: 1.2-2.4mm, 550-700 MPa mukavemet", image: nawelTungstenCarbideImg },
         { name: "NAWEL BUİLDUP", description: "Yüksek mukavemet gerektiren uygulamalar", specs: "Çap: 1.2-2.4mm, 550-700 MPa mukavemet", image: nawelBuildupImg },
       ],
-      image: "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg",
+      image: foto7,
       icon: <Flame className="w-8 h-8" />,
     },
     {
@@ -86,7 +91,7 @@ const Products: React.FC = () => {
         { name: "NAWEL Plate Ultrahard 65", description: "Çok katmanlı hibrit yapı", specs: "Değişken sertlik, 15-120mm kalınlık", image: nawelUltraHard65Img },
         { name: "NAWEL Plate Ultrahard 70T", description: "Çok katmanlı hibrit yapı", specs: "Değişken sertlik, 15-120mm kalınlık", image: nawelUltraHard70TImg },
       ],
-      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
+      image: foto9,
       icon: <Shield className="w-8 h-8" />,
     },
     {
@@ -110,7 +115,7 @@ const Products: React.FC = () => {
         { name: "Nawel Tubular Electrode B", description: "Karbon-paslanmaz çelik birleştirme", specs: "Çap: 3.2-5.0mm, Yüksek alaşım", image: naweldElectrodeBImg },
         { name: "Nawel Tubular Electrode TiC", description: "Aşınma direnci için özel elektrod", specs: "Çap: 3.2-6.0mm, 45-60 HRC sertlik", image: naweldElectrodeTiCImg },
       ],
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg",
+      image: foto10,
       icon: <Wrench className="w-8 h-8" />,
     },
   ];
@@ -154,7 +159,7 @@ const Products: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative group">
                   <div className="overflow-hidden rounded-xl shadow-2xl">
-                    <img
+                    <img style={{objectFit: 'contain'}}
                       src={product.image}
                       alt={product.title}
                       className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
@@ -202,7 +207,7 @@ const Products: React.FC = () => {
                       className="group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-3 transition-all duration-300 block"
                     >
                       <div className="overflow-hidden rounded-lg mb-4 relative">
-                        <img
+                        <img style={{objectFit: 'contain'}}
                           src={subProduct.image}
                           alt={subProduct.name}
                           className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
