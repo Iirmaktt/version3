@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Award, BookOpen, Clock, CheckCircle, GraduationCap } from 'lucide-react';
+import consultationImg from '@/assets/headway-5QgIuuBxKwM-unsplash.jpg';
 import certificateProgramImg from "../assets/resim2.jpg"; // relative path
 
 const SymbolAkademi: React.FC = () => {
@@ -79,12 +80,19 @@ const SymbolAkademi: React.FC = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 text-center">
-        <h1 className="text-5xl font-bold mb-6 text-blue-300">Symbol Akademi</h1>
-        <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 text-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-15"
+          style={{ backgroundImage: `url(${consultationImg})` }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/85 via-blue-800/75 to-black/85"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h1 className="text-5xl font-bold mb-6 text-blue-300">Symbol Akademi</h1>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
           Kaynak teknolojileri ve endüstriyel beceri geliştirme alanında kapsamlı eğitim programları
-        </p>
-        <div className="w-24 h-1 bg-blue-400 mx-auto rounded-full"></div>
+          </p>
+          <div className="w-24 h-1 bg-blue-400 mx-auto rounded-full"></div>
+        </div>
       </section>
 
       {/* Stats Section */}
@@ -161,12 +169,18 @@ const SymbolAkademi: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-white text-center">
-        <h2 className="text-4xl font-bold mb-6">Kariyerinizi Bir Sonraki Seviyeye Taşıyın</h2>
-        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+      <section className="relative py-20 bg-gray-900 text-white text-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${consultationImg})` }}
+        ></div>
+        <div className="absolute inset-0 bg-gray-900/90"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h2 className="text-4xl font-bold mb-6">Kariyerinizi Bir Sonraki Seviyeye Taşıyın</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
           Symbol Akademi'nin kapsamlı eğitim programları ile kaynak teknolojileri alanında uzmanlaşın
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transform hover:scale-105 transition-all duration-300">
             Eğitime Başla
             <ArrowRight className="ml-2 w-5 h-5" />
@@ -175,6 +189,7 @@ const SymbolAkademi: React.FC = () => {
             Tüm Hizmetleri Gör
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
+          </div>
         </div>
       </section>
     </div>

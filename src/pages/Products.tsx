@@ -4,6 +4,7 @@ import {
   Settings, Zap, Shield, Wrench, Flame
 } from 'lucide-react';
 
+import industrialWorkerImg from '@/assets/call-me-lamb-aLWgHZ1PC0o-unsplash.jpg';
 import nawelImg from "@/assets/nawel-cast.jpg";
 import nawelToolImg from "@/assets/nawel-tool.png";
 import nawelCorrosionImg from "@/assets/nawel-corrosion.png";
@@ -110,15 +111,22 @@ const Products: React.FC = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: `url(${industrialWorkerImg})` }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-black/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">
-            Kaynak ve <span className="text-blue-300">Endüstriyel Ürünlerimiz</span>
-          </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-            Yüksek kaliteli kaynak malzemeleri ve endüstriyel çözümlerle üretim süreçlerinizi güçlendirin
-          </p>
-          <div className="w-24 h-1 bg-blue-400 mx-auto rounded-full"></div>
+          <div className="relative z-10">
+            <h1 className="text-5xl font-bold mb-6">
+              Kaynak ve <span className="text-blue-300">Endüstriyel Ürünlerimiz</span>
+            </h1>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+              Yüksek kaliteli kaynak malzemeleri ve endüstriyel çözümlerle üretim süreçlerinizi güçlendirin
+            </p>
+            <div className="w-24 h-1 bg-blue-400 mx-auto rounded-full"></div>
+          </div>
         </div>
       </section>
 

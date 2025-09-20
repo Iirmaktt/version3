@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, CheckCircle, Users, Award, Target, Lightbulb } from 'lucide-react';
+import consultationImg from '@/assets/headway-5QgIuuBxKwM-unsplash.jpg';
 import resim3 from "../assets/resim3.jpg";
 
 const Danismanlik: React.FC = () => {
@@ -73,9 +74,14 @@ const Danismanlik: React.FC = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: `url(${consultationImg})` }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-800/70 to-black/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center relative z-10">
             <h1 className="text-5xl font-bold mb-6">
               Uzman <span className="text-blue-300">Danışmanlık Hizmetleri</span>
             </h1>
@@ -247,15 +253,21 @@ const Danismanlik: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-800 to-blue-900 text-white">
+      <section className="relative py-20 bg-gradient-to-r from-blue-800 to-blue-900 text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-10"
+          style={{ backgroundImage: `url(${consultationImg})` }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-800/90 to-blue-900/90"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <div className="relative z-10">
+            <h2 className="text-4xl font-bold mb-6">
             Projelerinizi Bir Üst Seviyeye Taşıyın
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Uzman danışmanlık hizmetlerimizle üretim süreçlerinizi optimize edin ve rekabet avantajı kazanın
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-800 font-semibold rounded-full hover:bg-blue-50 transform hover:scale-105 transition-all duration-300"
@@ -270,6 +282,7 @@ const Danismanlik: React.FC = () => {
               Tüm Hizmetleri Gör
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
+            </div>
           </div>
         </div>
       </section>

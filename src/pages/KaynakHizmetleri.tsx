@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import industrialWorkerImg from '@/assets/call-me-lamb-aLWgHZ1PC0o-unsplash.jpg';
 
 const KaynakHizmetleri: React.FC = () => {
   const successfulProjects = [
@@ -61,9 +62,14 @@ const KaynakHizmetleri: React.FC = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20">
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-25"
+          style={{ backgroundImage: `url(${industrialWorkerImg})` }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/75 via-blue-800/65 to-black/75"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center relative z-10">
             <h1 className="text-5xl font-bold mb-6">
               Başarılı <span className="text-blue-300">Kaynak Projelerimiz</span>
             </h1>
@@ -146,15 +152,21 @@ const KaynakHizmetleri: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-800 to-blue-900 text-white">
+      <section className="relative py-20 bg-gradient-to-r from-blue-800 to-blue-900 text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-15"
+          style={{ backgroundImage: `url(${industrialWorkerImg})` }}
+        ></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-800/85 to-blue-900/85"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <div className="relative z-10">
+            <h2 className="text-4xl font-bold mb-6">
             Sizin Projeniz de Bir Sonraki Başarı Hikayemiz Olsun
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Profesyonel kaynak hizmetlerimizle projenizi hayata geçirin
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-800 font-semibold rounded-full hover:bg-blue-50 transform hover:scale-105 transition-all duration-300"
@@ -169,6 +181,7 @@ const KaynakHizmetleri: React.FC = () => {
               Ürünlerimizi İncele
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
+            </div>
           </div>
         </div>
       </section>
