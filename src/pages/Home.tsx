@@ -163,12 +163,14 @@ const Home: React.FC = () => {
             </p>
           </div>
           
+          {/* Ana ürün kartları */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.map((product, index) => (
               <div 
                 key={index}
                 className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 overflow-hidden"
               >
+                {/* Ürün görseli */}
                 <div className="relative h-48 overflow-hidden">
                   <img style={{objectFit: 'contain'}}
                     src={product.image}
@@ -177,6 +179,7 @@ const Home: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
+                {/* Ürün bilgileri */}
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-800 transition-colors duration-300">
                     {product.title}
@@ -196,6 +199,106 @@ const Home: React.FC = () => {
             ))}
           </div>
           
+          {/* Toz Kaynak Teli alt ürünleri bölümü */}
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <span className="text-blue-800">Toz Kaynak Teli</span> Ürün Çeşitleri
+              </h3>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Farklı uygulama alanları için özel olarak geliştirilmiş toz kaynak teli çeşitlerimizi keşfedin
+              </p>
+            </div>
+            
+            {/* Alt ürün kartları */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "NAWEL CAST",
+                  description: "Genel amaçlı kaynak uygulamaları için ideal çözüm",
+                  specs: "Çap: 0.8-2.4mm, AWS E71T-1 standardı",
+                  image: nawelImg,
+                  slug: "nawel-cast"
+                },
+                {
+                  name: "NAWEL TOOL",
+                  description: "Dış mekan kaynak işleri için mükemmel performans",
+                  specs: "Çap: 1.2-2.0mm, Rüzgar direnci yüksek",
+                  image: foto1,
+                  slug: "nawel-tool"
+                },
+                {
+                  name: "NAWEL CORROSION",
+                  description: "316L ve 308L paslanmaz çelik kaynak teli",
+                  specs: "Çap: 0.8-1.6mm, Yüksek korozyon direnci",
+                  image: foto2,
+                  slug: "nawel-corrosion"
+                },
+                {
+                  name: "NAWEL ABRASION",
+                  description: "Yüksek mukavemet gerektiren uygulamalar için",
+                  specs: "Çap: 1.2-2.4mm, 550-700 MPa mukavemet",
+                  image: nawelAbrasionImg,
+                  slug: "nawel-abrasion"
+                },
+                {
+                  name: "NAWEL TUNGSTEN CARBIDE",
+                  description: "Ekstrem aşınma koşulları için tungsten karbür takviyeli",
+                  specs: "Çap: 1.2-2.4mm, HRC 58-65 sertlik",
+                  image: foto3,
+                  slug: "nawel-tungsten-carbide"
+                },
+                {
+                  name: "NAWEL BUILDUP",
+                  description: "Onarım ve yeniden boyutlandırma işleri için",
+                  specs: "Çap: 1.2-2.4mm, Yüksek dolgu oranı",
+                  image: nawelBuildupImg,
+                  slug: "nawel-buildup"
+                }
+              ].map((subProduct, index) => (
+                <Link
+                  key={index}
+                  to={`/product/toz-kaynak-teli/${subProduct.slug}`}
+                  className="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-3 transition-all duration-300 block border border-gray-100 hover:border-blue-200"
+                >
+                  {/* Alt ürün görseli */}
+                  <div className="overflow-hidden rounded-lg mb-4 relative">
+                    <img
+                      src={subProduct.image}
+                      alt={subProduct.name}
+                      className="w-full h-40 object-contain group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  {/* Alt ürün bilgileri */}
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-800 transition-colors duration-300">
+                    {subProduct.name}
+                  </h4>
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                    {subProduct.description}
+                  </p>
+                  
+                  {/* Teknik özellikler */}
+                  <div className="bg-blue-50 p-3 rounded-md mb-4">
+                    <p className="text-blue-800 text-xs font-medium">
+                      {subProduct.specs}
+                    </p>
+                  </div>
+                  
+                  {/* Detay butonu */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="inline-flex items-center text-blue-800 font-medium text-sm">
+                      Detayları Gör
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+          
+          {/* Tüm ürünleri görüntüle butonu */}
           <div className="text-center mt-12">
             <Link
               to="/products"

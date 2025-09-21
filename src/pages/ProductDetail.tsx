@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Info, Settings, Zap } from 'lucide-react';
+import ImageGallery from '../components/ImageGallery';
 
 // Import images
 import nawelImg from "@/assets/nawel-cast.jpg";
@@ -37,14 +38,18 @@ import abrasion6 from "@/assets/abrasion6.png";
 import tung  from "@/assets/tung.jpg";
 import tung1  from "@/assets/tung1.jpg";
 
-
-
-
+/**
+ * Ürün detay sayfası komponenti
+ * - URL parametrelerinden ürün ve alt ürün bilgilerini alır
+ * - Ürün özelliklerini, teknik spesifikasyonları ve uygulama alanlarını gösterir
+ * - Çoklu resim galerisi ile ürün görsellerini sunar
+ * - Breadcrumb navigasyonu sağlar
+ */
 
 const ProductDetail: React.FC = () => {
   const { productId, subproductId } = useParams<{ productId: string; subproductId: string }>();
 
-  // Product data structure
+  // Ürün veri yapısı - Her ürün için detaylı bilgiler ve çoklu resimler
   const productData = {
     "toz-kaynak-teli": {
       title: "Toz Kaynak Teli",
@@ -54,7 +59,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL CAST",
           description: "Genel amaçlı kaynak uygulamaları için ideal çözüm sunan yüksek performanslı toz kaynak teli",
           detailedDescription: "NAWEL CAST, endüstriyel kaynak uygulamalarında mükemmel performans gösteren genel amaçlı toz kaynak telidir. Özel formülasyonu sayesinde stabil ark, düşük spatter oranı ve yüksek kaliteli kaynak dikişi sağlar. Çeşitli metal türleri için optimize edilmiş bu ürün, hem iç mekan hem de dış mekan uygulamalarında güvenle kullanılabilir.",
-          image: sira,
+          images: [sira, nawelImg, nawelalloy, third, fourth],
           specs: {
             "Çap Aralığı": "0.8-2.4mm",
             "Standart": "AWS E71T-1",
@@ -82,12 +87,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL TOOL",
           description: "Dış mekan kaynak işleri için mükemmel performans gösteren özel formülasyonlu kaynak teli",
           detailedDescription: "NAWEL TOOL, zorlu dış mekan koşullarında üstün performans gösteren özel kaynak telidir. Rüzgar direnci yüksek formülasyonu sayesinde açık havada yapılan kaynak işlemlerinde stabil ark sağlar. Özellikle inşaat ve altyapı projelerinde tercih edilen bu ürün, değişken hava koşullarında bile güvenilir sonuçlar verir.",
-          images: [
-            nawelalloy,
-            third,
-            fourth,
-            naweldevamı,
-          ],
+          images: [nawelToolImg, nawelalloy, third, fourth, naweldevamı],
           specs: {
             "Çap Aralığı": "1.2-2.0mm",
             "Özellik": "Rüzgar direnci yüksek",
@@ -115,7 +115,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL CORROSION",
           description: "316L ve 308L paslanmaz çelik kaynak teli, yüksek korozyon direnci",
           detailedDescription: "NAWEL CORROSION, paslanmaz çelik kaynak uygulamaları için özel olarak geliştirilmiş yüksek kaliteli kaynak telidir. 316L ve 308L alaşım kompozisyonu sayesinde mükemmel korozyon direnci sağlar. Kimya, gıda, ilaç ve petrokimya endüstrilerinde güvenle kullanılabilir.",
-          image: corrosion1,corrision2,corrosion3,corrosion5,
+          images: [nawelCorrosionImg, corrosion1, corrision2, corrosion3, corrosion5],
           specs: {
             "Çap Aralığı": "0.8-1.6mm",
             "Alaşım Türü": "316L / 308L",
@@ -143,7 +143,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL ABRASION",
           description: "Yüksek mukavemet gerektiren uygulamalar için özel geliştirilmiş aşınma dirençli kaynak teli",
           detailedDescription: "NAWEL ABRASION, aşırı aşınma koşullarında çalışan parçalar için özel olarak geliştirilmiş yüksek performanslı kaynak telidir. Üstün mekanik özellikleri ve aşınma direnci sayesinde zorlu endüstriyel uygulamalarda uzun ömür sağlar.",
-          image: abrasion1,abrasion2,abrasion3,abrasion4,abrasion5,abrasion6,
+          images: [nawelAbrasionImg, abrasion1, abrasion2, abrasion3, abrasion4, abrasion5, abrasion6],
           specs: {
             "Çap Aralığı": "1.2-2.4mm",
             "Mukavemet": "550-700 MPa",
@@ -171,7 +171,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL TUNGSTEN CARBIDE",
           description: "Ekstrem aşınma koşulları için tungsten karbür takviyeli özel kaynak teli",
           detailedDescription: "NAWEL TUNGSTEN CARBIDE, tungsten karbür partikülleri ile takviye edilmiş ultra yüksek performanslı kaynak telidir. Ekstrem aşınma koşullarında bile üstün dayanım gösteren bu ürün, en zorlu endüstriyel uygulamalarda tercih edilir.",
-          image: tung,tung1,
+          images: [nawelTungstenCarbideImg, tung, tung1, nawelAbrasionImg, abrasion1],
           specs: {
             "Çap Aralığı": "1.2-2.4mm",
             "Sertlik": "HRC 58-65",
@@ -199,7 +199,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL BUILDUP",
           description: "Onarım ve yeniden boyutlandırma işleri için özel buildup kaynak teli",
           detailedDescription: "NAWEL BUILDUP, aşınmış parçaların onarımı ve yeniden boyutlandırılması için özel olarak geliştirilmiş kaynak telidir. Yüksek dolgu oranı ve mükemmel işlenebilirlik özellikleri sayesinde ekonomik onarım çözümleri sunar.",
-          image: nawelBuildupImg,
+          images: [nawelBuildupImg, nawelImg, sira, nawelalloy, third],
           specs: {
             "Çap Aralığı": "1.2-2.4mm",
             "Dolgu Oranı": "Yüksek",
@@ -233,7 +233,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL Plate UltraLight 67T",
           description: "Genel amaçlı aşınma direnci için optimize edilmiş plaka",
           detailedDescription: "NAWEL Plate UltraLight 67T, genel endüstriyel uygulamalarda mükemmel aşınma direnci sağlayan ekonomik çözümdür. Orta seviye sertlik değerleri ile kolay işlenebilirlik özelliklerini birleştiren bu plaka, geniş kullanım alanına sahiptir.",
-          image: nawelUltraLight67TImg,
+          images: [nawelUltraLight67TImg, nawelAbrasionImg, abrasion1, abrasion2, abrasion3],
           specs: {
             "Sertlik": "370-430 HB",
             "Kalınlık": "6-80mm",
@@ -261,7 +261,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL Plate Ultrahard 67T",
           description: "Ağır aşınma koşulları için yüksek sertlik değerli plaka",
           detailedDescription: "NAWEL Plate Ultrahard 67T, ağır aşınma koşullarında üstün performans gösteren yüksek sertlik değerli plakadır. Zorlu endüstriyel uygulamalarda uzun servis ömrü sağlayan bu ürün, maliyet etkin çözümler sunar.",
-          image: nawelUltraHard67TImg,
+          images: [nawelUltraHard67TImg, nawelAbrasionImg, abrasion4, abrasion5, abrasion6],
           specs: {
             "Sertlik": "460-540 HB",
             "Kalınlık": "8-100mm",
@@ -289,7 +289,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL Plate UltraLight 65",
           description: "Hafif uygulamalar için optimize edilmiş aşınma dirençli plaka",
           detailedDescription: "NAWEL Plate UltraLight 65, hafif ve orta seviye aşınma koşulları için özel olarak geliştirilmiş plakadır. Düşük ağırlık ve iyi işlenebilirlik özellikleri ile pratik çözümler sunar.",
-          image: nawelUltraLight65Img,
+          images: [nawelUltraLight65Img, nawelUltraLight67TImg, abrasion1, abrasion2, abrasion3],
           specs: {
             "Sertlik": "350-420 HB",
             "Kalınlık": "4-60mm",
@@ -317,7 +317,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL Plate Ultrahard 65",
           description: "Yüksek performans gerektiren uygulamalar için ultra sert plaka",
           detailedDescription: "NAWEL Plate Ultrahard 65, en zorlu aşınma koşullarında bile üstün performans gösteren ultra sert plakadır. Yüksek sertlik değerleri ve mükemmel aşınma direnci ile kritik uygulamalarda tercih edilir.",
-          image: nawelUltraHard65Img,
+          images: [nawelUltraHard65Img, nawelUltraHard67TImg, abrasion4, abrasion5, abrasion6],
           specs: {
             "Sertlik": "500-580 HB",
             "Kalınlık": "10-80mm",
@@ -345,7 +345,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL Plate Ultrahard 70T",
           description: "En zorlu koşullar için maksimum sertlik değerli plaka",
           detailedDescription: "NAWEL Plate Ultrahard 70T, maksimum sertlik değerleri ile en zorlu endüstriyel koşullarda bile üstün performans gösteren premium plakadır. Ekstrem aşınma direnci ve yüksek darbe dayanımı ile kritik uygulamalarda tercih edilir.",
-          image: nawelUltraHard70TImg,
+          images: [nawelUltraHard70TImg, nawelUltraHard65Img, nawelUltraHard67TImg, abrasion5, abrasion6],
           specs: {
             "Sertlik": "570-625 HB",
             "Kalınlık": "10-50mm",
@@ -379,7 +379,7 @@ const ProductDetail: React.FC = () => {
           name: "Nawel Tubular Electrode NBS",
           description: "DIN 8555: E 2-UM-65-GR",
           detailedDescription: " Nawel tübüler elektrot NBS, demir esaslı bir alaşımdır ve tek pasoda yüksek sertlik ile çok yüksek aşınma direnci elde etme özelliğine sahiptir. Kaynak metalinin, katılaşma sırasında çok yüksek oranda demir karbo-boritler içeren ince mikro yapıya sahip olması, bu elektrota özgün özellikler kazandırır. Bu sayede elde edilen kaynak metali, düşük darbe koşullarında, metal-metal sürtünmesinde ve çok ince partiküllerin aşındırıcı etkisine maruz kalan parçalar için idealdir. Basit karbonlu ve düşük alaşımlı çelikler üzerinde, aşındırıcı aşınmaya dayanıklı tabaka oluşturmak amacıyla hem tek pasoda hem de çift pasoda kaynak yapılması tavsiye edilir. Maksimum çalışma sıcaklığı 200 °C’dir.",
-          image: naweldElectrodeNBSImg,
+          images: [naweldElectrodeNBSImg, naweldElectrodeCImg, naweldElectrodeBNMImg, naweldElectrodeBImg, naweldElectrodeTiCImg],
           specs: {
             "Çap Aralığı": "2.5-5.0mm",
             "Akım Türü": "AC/DC",
@@ -407,7 +407,7 @@ const ProductDetail: React.FC = () => {
           name: "Nawel Tubular Electrode C",
           description: "DIN 8555: E 10-UM-70-G",
           detailedDescription: "Demir esaslı, kromca zengin matris içinde sert krom karbür fazı içeren bir alaşımdır. Kuru ve ıslak aşındırıcı aşınmaya karşı yüksek direnç gösterebilir. Bu elektrot, basit karbonlu ve düşük alaşımlı çeliklerin sert dolgu kaynağı için tasarlanmıştır. Tek pasoda optimum özelliklere ulaşabilse de, iki pasoda uygulanması tavsiye edilir.",
-          image: naweldElectrodeCImg,
+          images: [naweldElectrodeCImg, naweldElectrodeNBSImg, naweldElectrodeBNMImg, naweldElectrodeBImg, naweldElectrodeTiCImg],
           specs: {
             "Çap Aralığı": "2.5-6.0mm",
             "Hidrojen İçeriği": "H4 (≤4ml/100g)",
@@ -435,7 +435,7 @@ const ProductDetail: React.FC = () => {
           name: "Nawel Tubular Electrode BNM",
           description: "DIN 8555: E 10-UM-70-GZ",
           detailedDescription: "Nawel tübüler elektrot BNM, demir esaslı bir alaşımdır ve tek pasoda çok yüksek sertlik ile aşınma direncine ulaşabilir. Kaynak metalinin, katılaşma sırasında nano karbo-boritler içeren ince mikro yapıya sahip olması bu elektrota özgün özellikler kazandırır. Molibden elementi sayesinde alaşım, çok yüksek sıcaklıklarda dahi aşınma özelliklerini koruyabilir ve aynı zamanda kimyasal korozyona karşı da belirli bir direnç gösterebilir. Bu elektrot, basit karbonlu ve düşük alaşımlı çelikler üzerinde, zorlu ve karmaşık aşınma koşullarında kullanılmak üzere tasarlanmıştır.",
-          image: naweldElectrodeBNMImg,
+          images: [naweldElectrodeBNMImg, naweldElectrodeNBSImg, naweldElectrodeCImg, naweldElectrodeBImg, naweldElectrodeTiCImg],
           specs: {
             "Çap Aralığı": "2.5-4.0mm",
             "Alaşım Türü": "316L uyumlu",
@@ -463,7 +463,7 @@ const ProductDetail: React.FC = () => {
           name: "Nawel Tubular Electrode B",
           description: "Karbon-paslanmaz çelik birleştirme için özel elektrod",
           detailedDescription: "Nawel Tubular Electrode B, karbon çelik ile paslanmaz çelik arasında kaynak yapmak için özel olarak geliştirilmiş elektrodtur. Farklı malzeme özelliklerini başarıyla birleştiren bu elektrod, hibrit uygulamalarda tercih edilir.",
-          image: naweldElectrodeBImg,
+          images: [naweldElectrodeBImg, naweldElectrodeNBSImg, naweldElectrodeCImg, naweldElectrodeBNMImg, naweldElectrodeTiCImg],
           specs: {
             "Çap Aralığı": "3.2-5.0mm",
             "Özellik": "Yüksek alaşım",
@@ -491,7 +491,7 @@ const ProductDetail: React.FC = () => {
           name: "Nawel Tubular Electrode TiC",
           description: "Aşınma direnci için özel elektrod, yüksek sertlik değerleri",
           detailedDescription: "Nawel Tubular Electrode TiC, titanium karbür takviyeli özel elektrodtur. Ekstrem aşınma koşullarında üstün performans gösteren bu elektrod, yüksek sertlik değerleri ile uzun servis ömrü sağlar.",
-          image: naweldElectrodeTiCImg,
+          images: [naweldElectrodeTiCImg, naweldElectrodeNBSImg, naweldElectrodeCImg, naweldElectrodeBNMImg, naweldElectrodeBImg],
           specs: {
             "Çap Aralığı": "3.2-6.0mm",
             "Sertlik": "45-60 HRC",
@@ -519,11 +519,12 @@ const ProductDetail: React.FC = () => {
     }
   };
 
-  // Get current product and subproduct
+  // Mevcut ürün ve alt ürün bilgilerini al
   const currentProduct = productId ? productData[productId as keyof typeof productData] : null;
   const currentSubProduct = currentProduct && subproductId ? 
     currentProduct.subProducts[subproductId as keyof typeof currentProduct.subProducts] : null;
 
+  // Ürün bulunamadığında hata sayfası göster
   if (!currentProduct || !currentSubProduct) {
     return (
       <div className="min-h-screen pt-16 flex items-center justify-center">
@@ -544,7 +545,7 @@ const ProductDetail: React.FC = () => {
 
   return (
     <div className="min-h-screen pt-16 bg-gray-50">
-      {/* Breadcrumb */}
+      {/* Breadcrumb navigasyonu */}
       <section className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <nav className="flex items-center space-x-2 text-sm">
@@ -563,30 +564,27 @@ const ProductDetail: React.FC = () => {
         </div>
       </section>
 
-      {/* Product Detail */}
+      {/* Ürün detay bölümü */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Product Image */}
+            {/* Ürün resim galerisi */}
             <div className="relative">
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                < img style ={{objectFit: 'contain'}}
-                  src={currentSubProduct.image}
-                  alt={currentSubProduct.name}
-                  className="w-full h-96 object-cover"
-                />
-              </div>
+              <ImageGallery 
+                images={currentSubProduct.images} 
+                productName={currentSubProduct.name}
+              />
               
-              {/* Back Button */}
+              {/* Geri dönüş butonu */}
               <Link
                 to="/products"
-                className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-gray-700 p-2 rounded-full hover:bg-white hover:text-blue-800 transition-all duration-300 shadow-lg"
+                className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-gray-700 p-3 rounded-full hover:bg-white hover:text-blue-800 transition-all duration-300 shadow-lg z-10"
               >
                 <ArrowLeft className="w-5 h-5" />
               </Link>
             </div>
 
-            {/* Product Info */}
+            {/* Ürün bilgileri */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <div className="mb-6">
                 <div className="text-sm text-blue-600 font-medium mb-2">
@@ -603,7 +601,7 @@ const ProductDetail: React.FC = () => {
                 </p>
               </div>
 
-              {/* Features */}
+              {/* Ürün özellikleri */}
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
@@ -619,7 +617,7 @@ const ProductDetail: React.FC = () => {
                 </div>
               </div>
 
-              {/* Applications */}
+              {/* Uygulama alanları */}
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                   <Settings className="w-5 h-5 text-blue-600 mr-2" />
@@ -635,7 +633,7 @@ const ProductDetail: React.FC = () => {
                 </div>
               </div>
 
-              {/* Contact Button */}
+              {/* İletişim butonları */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/contact"
@@ -655,7 +653,7 @@ const ProductDetail: React.FC = () => {
             </div>
           </div>
 
-          {/* Technical Specifications */}
+          {/* Teknik özellikler bölümü */}
           <div className="mt-12 bg-white rounded-xl shadow-lg p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
               <Info className="w-6 h-6 text-blue-600 mr-3" />
