@@ -88,7 +88,7 @@ const Home: React.FC = () => {
           <div className="animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-blue-300 to-white bg-clip-text text-transparent">
-                NamadNanoTech
+                SCİWELD
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-blue-200 mb-8 max-w-3xl mx-auto">
@@ -123,7 +123,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Neden <span className="text-blue-800">NamadNanoTech?</span>
+              Neden <span className="text-blue-800">SCİWELD?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Nanoteknoloji alanında öncü çözümlerimizle endüstriyel dönüşümün lideri oluyoruz

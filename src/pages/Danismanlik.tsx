@@ -144,7 +144,7 @@ const Danismanlik: React.FC = () => {
                 Neden Danışmanlık Hizmetimizi Tercih Etmelisiniz?
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                NamadNanoTech olarak, kaynak teknolojileri ve endüstriyel üretim süreçlerinde kapsamlı danışmanlık 
+                SCİWELD olarak, kaynak teknolojileri ve endüstriyel üretim süreçlerinde kapsamlı danışmanlık 
                 hizmetleri sunuyoruz. Deneyimli mühendis kadromuz, projelerinizin her aşamasında teknik rehberlik sağlar.
               </p>
               

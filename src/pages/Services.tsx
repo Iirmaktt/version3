@@ -10,7 +10,7 @@ const Services: React.FC = () => {
       id: 1,
       title: "Danışmanlık Hizmetleri",
       description: "Endüstriyel üretim ve kaynak teknolojileri alanında uzman danışmanlık",
-      longDescription: "NamadNanoTech olarak, kaynak teknolojileri ve endüstriyel üretim süreçlerinde kapsamlı danışmanlık hizmetleri sunuyoruz. Deneyimli mühendis kadromuz, projelerinizin her aşamasında teknik rehberlik sağlar. Malzeme seçiminden üretim süreç optimizasyonuna, kalite kontrol sistemlerinden maliyet analizine kadar geniş bir yelpazede uzman desteği alabilirsiniz. Müşterilerimizin ihtiyaçlarına özel çözümler geliştirerek, üretim verimliliğini artırır ve operasyonel maliyetleri düşürürüz. Sektördeki yıllarca birikimimiz ve güncel teknoloji bilgimizle, işletmenizin rekabet gücünü artıracak stratejik öneriler sunuyoruz.",
+      longDescription: "SCİWELD olarak, kaynak teknolojileri ve endüstriyel üretim süreçlerinde kapsamlı danışmanlık hizmetleri sunuyoruz. Deneyimli mühendis kadromuz, projelerinizin her aşamasında teknik rehberlik sağlar. Malzeme seçiminden üretim süreç optimizasyonuna, kalite kontrol sistemlerinden maliyet analizine kadar geniş bir yelpazede uzman desteği alabilirsiniz. Müşterilerimizin ihtiyaçlarına özel çözümler geliştirerek, üretim verimliliğini artırır ve operasyonel maliyetleri düşürürüz. Sektördeki yıllarca birikimimiz ve güncel teknoloji bilgimizle, işletmenizin rekabet gücünü artıracak stratejik öneriler sunuyoruz.",
       features: [
         "Ekipmanın türüne ve boyutlarına uygun kaynak telinin belirlenmesi",
         "Özel çalışma koşullarına uygun kaynak telinin seçilmesi",
@@ -26,7 +26,7 @@ const Services: React.FC = () => {
       id: 2,
       title: "Kaynak Hizmetleri",
       description: "Profesyonel kaynak işleri ve özel üretim çözümleri",
-      longDescription: "Endüstriyel kaynak alanında geniş kapsamlı hizmetler sunan NamadNanoTech, her türlü kaynak işlemini en yüksek kalite standartlarında gerçekleştirir. Modern ekipmanlarımız ve sertifikalı kaynak operatörlerimizle, ince işçilikten ağır sanayi uygulamalarına kadar her projeyi başarıyla tamamlıyoruz. TIG, MIG/MAG, ark kaynağı ve özel kaynak teknikleri konusunda uzmanız. Paslanmaz çelik, karbon çelik, alüminyum ve özel alaşımlar üzerinde çalışma kabiliyetimiz bulunmaktadır. Prototip üretiminden seri üretime, onarım işlerinden özel tasarım projelerine kadar tüm ihtiyaçlarınıza cevap veriyoruz. Kalite kontrol süreçlerimiz ve test prosedürlerimizle, her işin mükemmel sonuçlanmasını garanti ediyoruz.",
+      longDescription: "Endüstriyel kaynak alanında geniş kapsamlı hizmetler sunan SCİWELD, her türlü kaynak işlemini en yüksek kalite standartlarında gerçekleştirir. Modern ekipmanlarımız ve sertifikalı kaynak operatörlerimizle, ince işçilikten ağır sanayi uygulamalarına kadar her projeyi başarıyla tamamlıyoruz. TIG, MIG/MAG, ark kaynağı ve özel kaynak teknikleri konusunda uzmanız. Paslanmaz çelik, karbon çelik, alüminyum ve özel alaşımlar üzerinde çalışma kabiliyetimiz bulunmaktadır. Prototip üretiminden seri üretime, onarım işlerinden özel tasarım projelerine kadar tüm ihtiyaçlarınıza cevap veriyoruz. Kalite kontrol süreçlerimiz ve test prosedürlerimizle, her işin mükemmel sonuçlanmasını garanti ediyoruz.",
       features: [
         "TIG, MIG/MAG ve ark kaynak işlemleri",
         "Paslanmaz çelik ve özel alaşım kaynağı",

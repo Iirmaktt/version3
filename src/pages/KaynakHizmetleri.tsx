@@ -1,55 +1,56 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import foto1 from '@/assets/1.jpg';
+import foto2 from '@/assets/2.jpg';
+import foto3 from '@/assets/3.jpg';
+import foto4 from '@/assets/4.jpg';
+import foto5 from '@/assets/5.jpg';
+import foto6 from '@/assets/6.jpg';
+import foto7 from '@/assets/7.jpg';
+import foto8 from '@/assets/8.jpg';
+import foto9 from '@/assets/9.jpg';
+
+
 import industrialWorkerImg from '@/assets/call-me-lamb-aLWgHZ1PC0o-unsplash.jpg';
 import industrialBgImg from '@/assets/industrial-worker-bg.jpg';
 
 const KaynakHizmetleri: React.FC = () => {
   const successfulProjects = [
     {
-      title: "Endüstriyel Çelik Konstrüksiyon",
-      category: "İnşaat Sektörü",
-      image: "https://namadnanotech.com/uploads/c4d5133097424b0782b94b5d1168c847.jpg"
+      
+      image: foto1
     },
     {
-      title: "Otomotiv Parça Üretimi",
-      category: "Otomotiv Sanayi",
-      image: "https://namadnanotech.com/uploads/391820a68d82471084e6d93986c19fc1.jpg"
+      
+      image: foto2
     },
     {
-      title: "Gemi İnşa Projesi",
-      category: "Denizcilik",
-      image: "https://namadnanotech.com/uploads/91263ce537114f73912ba9096417425e.jpg"
+     
+      image: foto3
     },
     {
-      title: "Petrol Boru Hattı",
-      category: "Enerji Sektörü",
-      image: "https://namadnanotech.com/uploads/f995351737c64d5285401bb4e79ff0fd.jpg"
+     
+      image: foto4
     },
     {
-      title: "Madencilik Ekipmanları",
-      category: "Ağır Sanayi",
-      image: "https://namadnanotech.com/uploads/01da07f67cdc4032b2eab1f3d9b307ea.jpg"
+      
+      image: foto5
     },
     {
-      title: "Havacılık Komponenti",
-      category: "Havacılık",
-      image: "https://namadnanotech.com/uploads/e5d7b40748d24042a4da76e9759e17a8.jpg"
+     
+      image: foto6
     },
     {
-      title: "Köprü İnşaatı",
-      category: "Altyapı",
-      image: "https://namadnanotech.com/uploads/81541bf2749442dab11e76464e3f3774.jpg"
+      
+      image: foto7
     },
     {
-      title: "Rafineri Ekipmanları",
-      category: "Petrokimya",
-      image: "https://namadnanotech.com/uploads/4aab9ebdb4c140979d3141760702d9f7.jpg"
+      image: foto8
     },
     {
-      title: "Raylı Sistem Projeleri",
-      category: "Ulaştırma",
-      image: "https://namadnanotech.com/uploads/1eeaf2f7f96842b0b9d24e095ab7de0f.jpg"
+     
+      image: foto9
     }
   ];
 

@@ -10,13 +10,13 @@ const Footer: React.FC = () => {
           {/* Logo & Slogan */}
           <div className="col-span-1 md:col-span-2">
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent mb-4">
-              NamadNanoTech
+              SCİWELD
             </div>
             <p className="text-gray-300 mb-6 text-lg">
               Nano-Hassasiyetle Geleceği Şekillendiriyoruz
             </p>
             <p className="text-gray-400 leading-relaxed">
-              NamadNanoTech, nanoteknoloji alanında yüksek katma değerli çözümler sunan 
+              SCİWELD, nanoteknoloji alanında yüksek katma değerli çözümler sunan 
               öncü bir teknoloji firmasıdır. İnovatif yaklaşımımızla geleceğin teknolojilerini bugüne taşıyoruz.
             </p>
           </div>
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <Mail size={16} className="mr-2 text-blue-400" />
-                <span className="text-sm">contact@namadnanotech.com</span>
+                <span className="text-sm">contact@SCİWELD.com</span>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 NamadNanoTech. Tüm hakları saklıdır.
+            © 2025 SCİWELD. Tüm hakları saklıdır.
           </div>
           <div className="flex space-x-4">
             <a 

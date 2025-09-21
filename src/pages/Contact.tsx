@@ -45,8 +45,8 @@ const Contact: React.FC = () => {
       icon: <MapPin className="w-6 h-6" />,
       title: "Adres",
       details: [
-        "NanoPark Sanayi Bölgesi",
-        "Tahran, İran"
+        "Şemsibeyosb Mahallesi, Urartu Caddesi No: 2, Tuşba / Van",
+       
       ]
     },
     {
@@ -61,8 +61,7 @@ const Contact: React.FC = () => {
       icon: <Mail className="w-6 h-6" />,
       title: "E-posta",
       details: [
-        "contact@namadnanotech.com",
-        "info@namadnanotech.com"
+      "sciweld.tech@gmail.com"
       ]
     },
     {
@@ -287,12 +286,12 @@ const Contact: React.FC = () => {
               </div>
 
               {/* Map Placeholder */}
-              <div className="bg-gray-100 rounded-xl h-64 mb-8 flex items-center justify-center">
+              <div className="bg-gray-100 rounded-xl h-64 mb-16 ">
                 <div className="text-center">
-                  <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                  <p className="text-gray-500 font-medium">Google Harita</p>
-                  <p className="text-gray-400 text-sm">NanoPark Sanayi Bölgesi</p>
-                  <p className="text-gray-400 text-sm">Tahran, İran</p>
+                <iframe width="100%" height="255px"  scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%C5%9Eemsibey%20OSB+(Sciweld)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/it/calcola-la-popolazione-su-una-mappa/">città più popolate Italia mappa</a></iframe>
+                
+                  <p className="text-gray-400 text-sm">Şemsibeyosb Mahallesi Urartu Caddesi</p>
+                  <p className="text-gray-400 text-sm">Tuşba/ Van</p>
                 </div>
               </div>
 
@@ -317,7 +316,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">E-posta gönderin</p>
-                      <p className="text-gray-600 text-sm">contact@namadnanotech.com</p>
+                      <p className="text-gray-600 text-sm">contact@SCİWELD.com</p>
                     </div>
                   </div>
                   <div className="flex items-center">

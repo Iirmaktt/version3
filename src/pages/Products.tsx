@@ -50,7 +50,7 @@ const Products: React.FC = () => {
       title: "Toz Kaynak Teli",
       description: "Yüksek kaliteli toz kaynak telleri ve flux cored kaynak çözümleri",
       longDescription:
-        "NamadNanoTech'in toz kaynak teli ürünleri, endüstriyel kaynak uygulamaları için özel olarak geliştirilmiştir. Yüksek mukavemet, mükemmel kaynak kalitesi ve düşük spatter oranı ile karakterize edilen ürünlerimiz, çeşitli metal türleri için optimize edilmiştir.",
+        "SCİWELD'in toz kaynak teli ürünleri, endüstriyel kaynak uygulamaları için özel olarak geliştirilmiştir. Yüksek mukavemet, mükemmel kaynak kalitesi ve düşük spatter oranı ile karakterize edilen ürünlerimiz, çeşitli metal türleri için optimize edilmiştir.",
       features: [
         "Yüksek mukavemet ve dayanıklılık",
         "Düşük spatter oranı",
@@ -75,7 +75,7 @@ const Products: React.FC = () => {
       title: "Aşınmaya Dayanıklı Plaka",
       description: "Endüstriyel uygulamalar için ultra dayanıklı aşınma önleyici plakalar",
       longDescription:
-        "NamadNanoTech'in aşınmaya dayanıklı plakaları, zorlu endüstriyel koşullarda maksimum performans sunar. Özel alaşım kompozisyonu ve gelişmiş üretim teknikleri ile üretilen plakalarımız, uzun ömür ve düşük bakım maliyeti sağlar.",
+        "SCİWELD'in aşınmaya dayanıklı plakaları, zorlu endüstriyel koşullarda maksimum performans sunar. Özel alaşım kompozisyonu ve gelişmiş üretim teknikleri ile üretilen plakalarımız, uzun ömür ve düşük bakım maliyeti sağlar.",
       features: [
         "Yüksek aşınma direnci (HB 400-600)",
         "Mükemmel darbe dayanımı",
@@ -99,7 +99,7 @@ const Products: React.FC = () => {
       title: "Toz Kaplamalı El Elektrodu",
       description: "Profesyonel kaynak uygulamaları için yüksek performanslı elektrodlar",
       longDescription:
-        "NamadNanoTech'in toz kaplamalı el elektrodları, manuel ark kaynak işlemlerinde üstün performans sunar. Özel kaplama formülasyonları ile geliştirilmiş elektrodlarımız, stabil ark, düşük spatter ve yüksek kaliteli kaynak dikişi sağlar.",
+        "SCİWELD'in toz kaplamalı el elektrodları, manuel ark kaynak işlemlerinde üstün performans sunar. Özel kaplama formülasyonları ile geliştirilmiş elektrodlarımız, stabil ark, düşük spatter ve yüksek kaliteli kaynak dikişi sağlar.",
       features: [
         "Stabil ve güçlü ark",
         "Düşük hidrojen içeriği",

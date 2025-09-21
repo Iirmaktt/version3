@@ -19,6 +19,27 @@ import naweldElectrodeCImg from "@/assets/electrode-c.png";
 import naweldElectrodeBNMImg from "@/assets/electrode-bnm.png";
 import naweldElectrodeBImg from "@/assets/electrode-b.png";
 import naweldElectrodeTiCImg from "@/assets/electrode-tic.png";
+import sira from "@/assets/sira.jpeg";
+import fourth from "@/assets/fourth.png";
+import nawelalloy from "@/assets/nawelalloy.png";
+import naweldevamı from "@/assets/naweldevamı.png";
+import third from "@/assets/third.png";
+import corrosion1 from "@/assets/corrosion1.png";
+import corrision2 from "@/assets/corrision2.png";
+import corrosion3 from "@/assets/corrosion3.png";
+import corrosion5 from "@/assets/corrosion5.jpg";
+import abrasion1 from "@/assets/abrasion1.png";
+import abrasion2 from "@/assets/abrasion2.png";
+import abrasion3 from "@/assets/abrasion3.png";
+import abrasion4 from "@/assets/abrasion4.png";
+import abrasion5 from "@/assets/abrasion5.png";
+import abrasion6 from "@/assets/abrasion6.png";
+import tung  from "@/assets/tung.jpg";
+import tung1  from "@/assets/tung1.jpg";
+
+
+
+
 
 const ProductDetail: React.FC = () => {
   const { productId, subproductId } = useParams<{ productId: string; subproductId: string }>();
@@ -33,7 +54,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL CAST",
           description: "Genel amaçlı kaynak uygulamaları için ideal çözüm sunan yüksek performanslı toz kaynak teli",
           detailedDescription: "NAWEL CAST, endüstriyel kaynak uygulamalarında mükemmel performans gösteren genel amaçlı toz kaynak telidir. Özel formülasyonu sayesinde stabil ark, düşük spatter oranı ve yüksek kaliteli kaynak dikişi sağlar. Çeşitli metal türleri için optimize edilmiş bu ürün, hem iç mekan hem de dış mekan uygulamalarında güvenle kullanılabilir.",
-          image: nawelImg,
+          image: sira,
           specs: {
             "Çap Aralığı": "0.8-2.4mm",
             "Standart": "AWS E71T-1",
@@ -61,7 +82,12 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL TOOL",
           description: "Dış mekan kaynak işleri için mükemmel performans gösteren özel formülasyonlu kaynak teli",
           detailedDescription: "NAWEL TOOL, zorlu dış mekan koşullarında üstün performans gösteren özel kaynak telidir. Rüzgar direnci yüksek formülasyonu sayesinde açık havada yapılan kaynak işlemlerinde stabil ark sağlar. Özellikle inşaat ve altyapı projelerinde tercih edilen bu ürün, değişken hava koşullarında bile güvenilir sonuçlar verir.",
-          image: nawelToolImg,
+          images: [
+            nawelalloy,
+            third,
+            fourth,
+            naweldevamı,
+          ],
           specs: {
             "Çap Aralığı": "1.2-2.0mm",
             "Özellik": "Rüzgar direnci yüksek",
@@ -89,7 +115,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL CORROSION",
           description: "316L ve 308L paslanmaz çelik kaynak teli, yüksek korozyon direnci",
           detailedDescription: "NAWEL CORROSION, paslanmaz çelik kaynak uygulamaları için özel olarak geliştirilmiş yüksek kaliteli kaynak telidir. 316L ve 308L alaşım kompozisyonu sayesinde mükemmel korozyon direnci sağlar. Kimya, gıda, ilaç ve petrokimya endüstrilerinde güvenle kullanılabilir.",
-          image: nawelCorrosionImg,
+          image: corrosion1,corrision2,corrosion3,corrosion5,
           specs: {
             "Çap Aralığı": "0.8-1.6mm",
             "Alaşım Türü": "316L / 308L",
@@ -117,7 +143,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL ABRASION",
           description: "Yüksek mukavemet gerektiren uygulamalar için özel geliştirilmiş aşınma dirençli kaynak teli",
           detailedDescription: "NAWEL ABRASION, aşırı aşınma koşullarında çalışan parçalar için özel olarak geliştirilmiş yüksek performanslı kaynak telidir. Üstün mekanik özellikleri ve aşınma direnci sayesinde zorlu endüstriyel uygulamalarda uzun ömür sağlar.",
-          image: nawelAbrasionImg,
+          image: abrasion1,abrasion2,abrasion3,abrasion4,abrasion5,abrasion6,
           specs: {
             "Çap Aralığı": "1.2-2.4mm",
             "Mukavemet": "550-700 MPa",
@@ -145,7 +171,7 @@ const ProductDetail: React.FC = () => {
           name: "NAWEL TUNGSTEN CARBIDE",
           description: "Ekstrem aşınma koşulları için tungsten karbür takviyeli özel kaynak teli",
           detailedDescription: "NAWEL TUNGSTEN CARBIDE, tungsten karbür partikülleri ile takviye edilmiş ultra yüksek performanslı kaynak telidir. Ekstrem aşınma koşullarında bile üstün dayanım gösteren bu ürün, en zorlu endüstriyel uygulamalarda tercih edilir.",
-          image: nawelTungstenCarbideImg,
+          image: tung,tung1,
           specs: {
             "Çap Aralığı": "1.2-2.4mm",
             "Sertlik": "HRC 58-65",
@@ -351,8 +377,8 @@ const ProductDetail: React.FC = () => {
       subProducts: {
         "nawel-tubular-electrode-nbs": {
           name: "Nawel Tubular Electrode NBS",
-          description: "Başlangıç seviyesi için ideal genel amaçlı elektrod",
-          detailedDescription: "Nawel Tubular Electrode NBS, başlangıç seviyesindeki kaynak operatörleri için özel olarak geliştirilmiş kullanıcı dostu elektrodtur. Kolay tutuşma, stabil ark ve temiz kaynak dikişi özellikleri ile öğrenme sürecini kolaylaştırır.",
+          description: "DIN 8555: E 2-UM-65-GR",
+          detailedDescription: " Nawel tübüler elektrot NBS, demir esaslı bir alaşımdır ve tek pasoda yüksek sertlik ile çok yüksek aşınma direnci elde etme özelliğine sahiptir. Kaynak metalinin, katılaşma sırasında çok yüksek oranda demir karbo-boritler içeren ince mikro yapıya sahip olması, bu elektrota özgün özellikler kazandırır. Bu sayede elde edilen kaynak metali, düşük darbe koşullarında, metal-metal sürtünmesinde ve çok ince partiküllerin aşındırıcı etkisine maruz kalan parçalar için idealdir. Basit karbonlu ve düşük alaşımlı çelikler üzerinde, aşındırıcı aşınmaya dayanıklı tabaka oluşturmak amacıyla hem tek pasoda hem de çift pasoda kaynak yapılması tavsiye edilir. Maksimum çalışma sıcaklığı 200 °C’dir.",
           image: naweldElectrodeNBSImg,
           specs: {
             "Çap Aralığı": "2.5-5.0mm",
@@ -363,24 +389,24 @@ const ProductDetail: React.FC = () => {
             "Uzama": "≥22%"
           },
           features: [
-            "Kolay tutuşma",
-            "Stabil ark",
-            "Temiz kaynak dikişi",
-            "Başlangıç seviyesi için ideal",
-            "AC/DC kullanım",
-            "Geniş çap seçenekleri"
+            "Portatif cihazlarla AC/DC kutuplarda uygulanabilir",
+            "Cüruf temizlemeye gerek yok",
+            "Neme dayanıklı, kurutma gerektirmez",
+            "Yüksek dolgu oranı ve %92’ye kadar geri kazanım",
+            "Düşük amperde uygulanabilir, düşük ısı girdisi ve deformasyon, ihmal edilebilir seyreltme",
+           
           ],
           applications: [
-            "Genel kaynak uygulamaları",
-            "Eğitim amaçlı kullanım",
-            "Bakım ve onarım işleri",
-            "Hafif yapı çeliği kaynağı"
+            "Malzeme taşıma helezonları",
+            "Çeşitli beton ve bulamaç pompaları",
+            "İnce partiküllerle aşındırıcı temas eden parçalar",
+            "Tarım ve madencilik endüstrisi"
           ]
         },
         "nawel-tubular-electrode-c": {
           name: "Nawel Tubular Electrode C",
-          description: "Kritik kaynak işleri için düşük hidrojen içerikli elektrod",
-          detailedDescription: "Nawel Tubular Electrode C, kritik kaynak uygulamaları için özel olarak geliştirilmiş düşük hidrojen içerikli elektrodtur. Yüksek kalite gerektiren projelerde çatlak riski olmadan güvenli kaynak sağlar.",
+          description: "DIN 8555: E 10-UM-70-G",
+          detailedDescription: "Demir esaslı, kromca zengin matris içinde sert krom karbür fazı içeren bir alaşımdır. Kuru ve ıslak aşındırıcı aşınmaya karşı yüksek direnç gösterebilir. Bu elektrot, basit karbonlu ve düşük alaşımlı çeliklerin sert dolgu kaynağı için tasarlanmıştır. Tek pasoda optimum özelliklere ulaşabilse de, iki pasoda uygulanması tavsiye edilir.",
           image: naweldElectrodeCImg,
           specs: {
             "Çap Aralığı": "2.5-6.0mm",
@@ -407,8 +433,8 @@ const ProductDetail: React.FC = () => {
         },
         "nawel-tubular-electrode-bnm": {
           name: "Nawel Tubular Electrode BNM",
-          description: "Paslanmaz çelik kaynak elektrodu, 316L uyumlu",
-          detailedDescription: "Nawel Tubular Electrode BNM, paslanmaz çelik kaynak uygulamaları için özel olarak geliştirilmiş elektrodtur. 316L alaşım uyumluluğu ile mükemmel korozyon direnci ve kaynak kalitesi sağlar.",
+          description: "DIN 8555: E 10-UM-70-GZ",
+          detailedDescription: "Nawel tübüler elektrot BNM, demir esaslı bir alaşımdır ve tek pasoda çok yüksek sertlik ile aşınma direncine ulaşabilir. Kaynak metalinin, katılaşma sırasında nano karbo-boritler içeren ince mikro yapıya sahip olması bu elektrota özgün özellikler kazandırır. Molibden elementi sayesinde alaşım, çok yüksek sıcaklıklarda dahi aşınma özelliklerini koruyabilir ve aynı zamanda kimyasal korozyona karşı da belirli bir direnç gösterebilir. Bu elektrot, basit karbonlu ve düşük alaşımlı çelikler üzerinde, zorlu ve karmaşık aşınma koşullarında kullanılmak üzere tasarlanmıştır.",
           image: naweldElectrodeBNMImg,
           specs: {
             "Çap Aralığı": "2.5-4.0mm",
@@ -427,7 +453,7 @@ const ProductDetail: React.FC = () => {
             "Gıda sınıfı uygulamalar"
           ],
           applications: [
-            "Paslanmaz çelik kaynağı",
+            "Yüksek sıcaklıkta malzeme taşıma helezonları",
             "Kimya endüstrisi",
             "Gıda işleme tesisleri",
             "İlaç sanayi"
