@@ -6,6 +6,7 @@ import resim4 from "../assets/resim4.jpg"; //
 import nawelImg from "@/assets/nawel-cast.jpg";
 import nawelAbrasionImg from "@/assets/nawel-abrasion.jpg";
 import naweldElectrodeNBSImg from "@/assets/electrode-nbs.png";
+import nawelBuildupImg from "@/assets/buildup.jpg";
 import foto1 from "@/assets/foto1.jpg";
 import foto2 from "@/assets/foto2.jpg";
 import foto3 from "@/assets/foto3.jpg";
