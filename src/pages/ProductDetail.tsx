@@ -55,7 +55,7 @@ const ProductDetail: React.FC = () => {
       title: "Toz Kaynak Teli",
       description: "Yüksek kaliteli toz kaynak telleri ve flux cored kaynak çözümleri",
       subProducts: {
-        "nawel-cast": {
+        "sciweld-cast": {
           name: "SCİWELD CAST",
           description: "Genel amaçlı kaynak uygulamaları için ideal çözüm sunan yüksek performanslı toz kaynak teli",
           detailedDescription: "SCİWELD CAST, endüstriyel kaynak uygulamalarında mükemmel performans gösteren genel amaçlı toz kaynak telidir. Özel formülasyonu sayesinde stabil ark, düşük spatter oranı ve yüksek kaliteli kaynak dikişi sağlar. Çeşitli metal türleri için optimize edilmiş bu ürün, hem iç mekan hem de dış mekan uygulamalarında güvenle kullanılabilir.",
@@ -83,7 +83,7 @@ const ProductDetail: React.FC = () => {
             "Onarım ve bakım işleri"
           ]
         },
-        "nawel-tool": {
+        "sciweld-tool": {
           name: "SCİWELD TOOL",
           description: "Dış mekan kaynak işleri için mükemmel performans gösteren özel formülasyonlu kaynak teli",
           detailedDescription: "SCİWELD TOOL, zorlu dış mekan koşullarında üstün performans gösteren özel kaynak telidir. Rüzgar direnci yüksek formülasyonu sayesinde açık havada yapılan kaynak işlemlerinde stabil ark sağlar. Özellikle inşaat ve altyapı projelerinde tercih edilen bu ürün, değişken hava koşullarında bile güvenilir sonuçlar verir.",
@@ -111,7 +111,7 @@ const ProductDetail: React.FC = () => {
             "Offshore yapılar"
           ]
         },
-        "nawel-corrosion": {
+        "sciweld-corrosion": {
           name: "SCİWELD CORROSION",
           description: "316L ve 308L paslanmaz çelik kaynak teli, yüksek korozyon direnci",
           detailedDescription: "SCİWELD CORROSION, paslanmaz çelik kaynak uygulamaları için özel olarak geliştirilmiş yüksek kaliteli kaynak telidir. 316L ve 308L alaşım kompozisyonu sayesinde mükemmel korozyon direnci sağlar. Kimya, gıda, ilaç ve petrokimya endüstrilerinde güvenle kullanılabilir.",
@@ -139,7 +139,7 @@ const ProductDetail: React.FC = () => {
             "Petrokimya tesisleri"
           ]
         },
-        "nawel-abrasion": {
+        "sciweld-abrasion": {
           name: "SCİWELD ABRASION",
           description: "Yüksek mukavemet gerektiren uygulamalar için özel geliştirilmiş aşınma dirençli kaynak teli",
           detailedDescription: "SCİWELD ABRASION, aşırı aşınma koşullarında çalışan parçalar için özel olarak geliştirilmiş yüksek performanslı kaynak telidir. Üstün mekanik özellikleri ve aşınma direnci sayesinde zorlu endüstriyel uygulamalarda uzun ömür sağlar.",
@@ -167,7 +167,7 @@ const ProductDetail: React.FC = () => {
             "Ağır sanayi uygulamaları"
           ]
         },
-        "nawel-tungsten-carbide": {
+        "sciweld-tungsten-carbide": {
           name: "SCİWELD TUNGSTEN CARBIDE",
           description: "Ekstrem aşınma koşulları için tungsten karbür takviyeli özel kaynak teli",
           detailedDescription: "SCİWELD TUNGSTEN CARBIDE, tungsten karbür partikülleri ile takviye edilmiş ultra yüksek performanslı kaynak telidir. Ekstrem aşınma koşullarında bile üstün dayanım gösteren bu ürün, en zorlu endüstriyel uygulamalarda tercih edilir.",
@@ -195,7 +195,7 @@ const ProductDetail: React.FC = () => {
             "Kritik aşınma noktaları"
           ]
         },
-        "nawel-buildup": {
+        "sciweld-buildup": {
           name: "SCİWELD BUILDUP",
           description: "Onarım ve yeniden boyutlandırma işleri için özel buildup kaynak teli",
           detailedDescription: "SCİWELD BUILDUP, aşınmış parçaların onarımı ve yeniden boyutlandırılması için özel olarak geliştirilmiş kaynak telidir. Yüksek dolgu oranı ve mükemmel işlenebilirlik özellikleri sayesinde ekonomik onarım çözümleri sunar.",
@@ -229,7 +229,7 @@ const ProductDetail: React.FC = () => {
       title: "Aşınmaya Dayanıklı Plaka",
       description: "Endüstriyel uygulamalar için ultra dayanıklı aşınma önleyici plakalar",
       subProducts: {
-        "nawel-plate-ultralight-67t": {
+        "sciweld-plate-ultralight-67t": {
           name: "SCİWELD Plate UltraLight 67T",
           description: "Genel amaçlı aşınma direnci için optimize edilmiş plaka",
           detailedDescription: "SCİWELD Plate UltraLight 67T, genel endüstriyel uygulamalarda mükemmel aşınma direnci sağlayan ekonomik çözümdür. Orta seviye sertlik değerleri ile kolay işlenebilirlik özelliklerini birleştiren bu plaka, geniş kullanım alanına sahiptir.",
@@ -257,7 +257,7 @@ const ProductDetail: React.FC = () => {
             "Tarım ekipmanları"
           ]
         },
-        "nawel-plate-ultrahard-67t": {
+        "sciweld-plate-ultrahard-67t": {
           name: "SCİWELD Plate Ultrahard 67T",
           description: "Ağır aşınma koşulları için yüksek sertlik değerli plaka",
           detailedDescription: "SCİWELD Plate Ultrahard 67T, ağır aşınma koşullarında üstün performans gösteren yüksek sertlik değerli plakadır. Zorlu endüstriyel uygulamalarda uzun servis ömrü sağlayan bu ürün, maliyet etkin çözümler sunar.",
@@ -285,7 +285,7 @@ const ProductDetail: React.FC = () => {
             "Kırma ve öğütme sistemleri"
           ]
         },
-        "nawel-plate-ultralight-65": {
+        "sciweld-plate-ultralight-65": {
           name: "SCİWELD Plate UltraLight 65",
           description: "Hafif uygulamalar için optimize edilmiş aşınma dirençli plaka",
           detailedDescription: "SCİWELD Plate UltraLight 65, hafif ve orta seviye aşınma koşulları için özel olarak geliştirilmiş plakadır. Düşük ağırlık ve iyi işlenebilirlik özellikleri ile pratik çözümler sunar.",
@@ -313,7 +313,7 @@ const ProductDetail: React.FC = () => {
             "Genel makine imalatı"
           ]
         },
-        "nawel-plate-ultrahard-65": {
+        "sciweld-plate-ultrahard-65": {
           name: "SCİWELD Plate Ultrahard 65",
           description: "Yüksek performans gerektiren uygulamalar için ultra sert plaka",
           detailedDescription: "SCİWELD Plate Ultrahard 65, en zorlu aşınma koşullarında bile üstün performans gösteren ultra sert plakadır. Yüksek sertlik değerleri ve mükemmel aşınma direnci ile kritik uygulamalarda tercih edilir.",
@@ -341,7 +341,7 @@ const ProductDetail: React.FC = () => {
             "Ekstrem koşullar"
           ]
         },
-        "nawel-plate-ultrahard-70t": {
+        "sciweld-plate-ultrahard-70t": {
           name: "SCİWELD Plate Ultrahard 70T",
           description: "En zorlu koşullar için maksimum sertlik değerli plaka",
           detailedDescription: "SCİWELD Plate Ultrahard 70T, maksimum sertlik değerleri ile en zorlu endüstriyel koşullarda bile üstün performans gösteren premium plakadır. Ekstrem aşınma direnci ve yüksek darbe dayanımı ile kritik uygulamalarda tercih edilir.",
@@ -375,7 +375,7 @@ const ProductDetail: React.FC = () => {
       title: "Toz Kaplamalı El Elektrodu",
       description: "Profesyonel kaynak uygulamaları için yüksek performanslı elektrodlar",
       subProducts: {
-        "nawel-tubular-electrode-nbs": {
+        "sciweld-tubular-electrode-nbs": {
           name: "SCİWELD Tubular Electrode NBS",
           description: "DIN 8555: E 2-UM-65-GR",
           detailedDescription: " SCİWELD tübüler elektrot NBS, demir esaslı bir alaşımdır ve tek pasoda yüksek sertlik ile çok yüksek aşınma direnci elde etme özelliğine sahiptir. Kaynak metalinin, katılaşma sırasında çok yüksek oranda demir karbo-boritler içeren ince mikro yapıya sahip olması, bu elektrota özgün özellikler kazandırır. Bu sayede elde edilen kaynak metali, düşük darbe koşullarında, metal-metal sürtünmesinde ve çok ince partiküllerin aşındırıcı etkisine maruz kalan parçalar için idealdir. Basit karbonlu ve düşük alaşımlı çelikler üzerinde, aşındırıcı aşınmaya dayanıklı tabaka oluşturmak amacıyla hem tek pasoda hem de çift pasoda kaynak yapılması tavsiye edilir. Maksimum çalışma sıcaklığı 200 °C’dir.",
@@ -403,7 +403,7 @@ const ProductDetail: React.FC = () => {
             "Tarım ve madencilik endüstrisi"
           ]
         },
-        "nawel-tubular-electrode-c": {
+        "sciweld-tubular-electrode-c": {
           name: "SCİWELD Tubular Electrode C",
           description: "DIN 8555: E 10-UM-70-G",
           detailedDescription: "Demir esaslı, kromca zengin matris içinde sert krom karbür fazı içeren bir alaşımdır. Kuru ve ıslak aşındırıcı aşınmaya karşı yüksek direnç gösterebilir. Bu elektrot, basit karbonlu ve düşük alaşımlı çeliklerin sert dolgu kaynağı için tasarlanmıştır. Tek pasoda optimum özelliklere ulaşabilse de, iki pasoda uygulanması tavsiye edilir.",
@@ -431,7 +431,7 @@ const ProductDetail: React.FC = () => {
             "Yüksek mukavemet gereken yerler"
           ]
         },
-        "nawel-tubular-electrode-bnm": {
+        "sciweld-tubular-electrode-bnm": {
           name: "SCİWELD Tubular Electrode BNM",
           description: "DIN 8555: E 10-UM-70-GZ",
           detailedDescription: "SCİWELD tübüler elektrot BNM, demir esaslı bir alaşımdır ve tek pasoda çok yüksek sertlik ile aşınma direncine ulaşabilir. Kaynak metalinin, katılaşma sırasında nano karbo-boritler içeren ince mikro yapıya sahip olması bu elektrota özgün özellikler kazandırır. Molibden elementi sayesinde alaşım, çok yüksek sıcaklıklarda dahi aşınma özelliklerini koruyabilir ve aynı zamanda kimyasal korozyona karşı da belirli bir direnç gösterebilir. Bu elektrot, basit karbonlu ve düşük alaşımlı çelikler üzerinde, zorlu ve karmaşık aşınma koşullarında kullanılmak üzere tasarlanmıştır.",
@@ -459,7 +459,7 @@ const ProductDetail: React.FC = () => {
             "İlaç sanayi"
           ]
         },
-        "nawel-tubular-electrode-b": {
+        "sciweld-tubular-electrode-b": {
           name: "SCİWELD Tubular Electrode B",
           description: "Karbon-paslanmaz çelik birleştirme için özel elektrod",
           detailedDescription: "SCİWELD Tubular Electrode B, karbon çelik ile paslanmaz çelik arasında kaynak yapmak için özel olarak geliştirilmiş elektrodtur. Farklı malzeme özelliklerini başarıyla birleştiren bu elektrod, hibrit uygulamalarda tercih edilir.",
@@ -487,7 +487,7 @@ const ProductDetail: React.FC = () => {
             "Farklı malzeme kombinasyonları"
           ]
         },
-        "nawel-tubular-electrode-tic": {
+        "sciweld-tubular-electrode-tic": {
           name: "SCİWELD Tubular Electrode TiC",
           description: "Aşınma direnci için özel elektrod, yüksek sertlik değerleri",
           detailedDescription: "SCİWELD Tubular Electrode TiC, titanium karbür takviyeli özel elektrodtur. Ekstrem aşınma koşullarında üstün performans gösteren bu elektrod, yüksek sertlik değerleri ile uzun servis ömrü sağlar.",
