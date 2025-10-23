@@ -57,14 +57,14 @@ const setIsScrolled=(...args)=>{};
   };
   const navItems = [
     { name: 'Anasayfa', path: '/', hasDropdown: false },
-    { 
-      name: 'Ürünler', 
-      path: '/products', 
+    {
+      name: 'Ürünler',
+      path: '/products',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Toz Kaynak Teli', path: '/products', sectionId: 'toz-kaynak-teli' },
-        { name: 'Aşınmaya Dayanıklı Plaka', path: '/products', sectionId: 'asinmaya-dayanikli-plaka' },
-        { name: 'Toz Kaplamalı El Elektrodu', path: '/products', sectionId: 'toz-kaplamali-el-elektrodu' }
+        { name: 'Toz Kaynak Teli', path: '/products/toz-kaynak-teli' },
+        { name: 'Aşınmaya Dayanıklı Plaka', path: '/products/asinmaya-dayanikli-plaka' },
+        { name: 'Toz Kaplamalı El Elektrodu', path: '/products/toz-kaplamali-el-elektrodu' }
       ]
     },
     { 
@@ -136,7 +136,10 @@ const setIsScrolled=(...args)=>{};
                     {item.dropdownItems?.map((dropdownItem) => (
                       <button
                         key={dropdownItem.name}
-                        onClick={() => handleSectionClick(dropdownItem.path, dropdownItem.sectionId)}
+                        onClick={() => {
+                          setActiveDropdown(null);
+                          navigate(dropdownItem.path);
+                        }}
                         className="w-full text-left block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-800 transition-colors duration-200 border-l-2 border-transparent hover:border-blue-500"
                       >
                         {dropdownItem.name}
@@ -184,7 +187,10 @@ const setIsScrolled=(...args)=>{};
                       {item.dropdownItems.map((dropdownItem) => (
                         <button
                           key={dropdownItem.name}
-                          onClick={() => handleSectionClick(dropdownItem.path, dropdownItem.sectionId)}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            navigate(dropdownItem.path);
+                          }}
                           className="w-full text-left block px-3 py-2 text-sm text-gray-600 hover:text-blue-800 hover:bg-blue-50 rounded-md"
                         >
                           {dropdownItem.name}
