@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight, Layers, Cpu, Atom, Microscope,
@@ -44,8 +44,6 @@ const getSubProductSlug = (name: string): string => {
 };
 
 const Products: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
-
   const products = [
     {
       id: 1,
@@ -131,10 +129,6 @@ const Products: React.FC = () => {
     { title: "Enerji Sektörü", description: "Güç santrali ve enerji altyapısı", icon: <Atom className="w-6 h-6" /> },
   ];
 
-  const filteredProducts = selectedCategory
-    ? products.filter(p => p.id === selectedCategory)
-    : products;
-
   return (
     <div className="min-h-screen pt-16">
       {/* Hero */}
@@ -157,42 +151,49 @@ const Products: React.FC = () => {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-8 bg-white border-b border-gray-200">
+      {/* Product Categories */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap gap-4 justify-center">
-            <button
-              onClick={() => setSelectedCategory(null)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                selectedCategory === null
-                  ? 'bg-blue-800 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              Tüm Ürünler
-            </button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.map((product) => (
-              <button
+              <Link
                 key={product.id}
-                onClick={() => setSelectedCategory(product.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
-                  selectedCategory === product.id
-                    ? 'bg-blue-800 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                to={`/products/${product.id === 1 ? 'toz-kaynak-teli' : product.id === 2 ? 'asinmaya-dayanikli-plaka' : 'toz-kaplamali-el-elektrodu'}`}
+                className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-300 overflow-hidden"
               >
-                {product.icon}
-                {product.title}
-              </button>
+                <div className="relative overflow-hidden">
+                  <img
+                    style={{ objectFit: 'contain' }}
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-6 left-6 bg-blue-600 text-white p-3 rounded-full">
+                    {product.icon}
+                  </div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-800 transition-colors duration-300">
+                    {product.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    {product.description}
+                  </p>
+                  <div className="inline-flex items-center text-blue-800 font-semibold">
+                    Ürünleri İncele
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Products */}
-      <section className="py-20 bg-gray-50">
+      {/* Products Details */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
-          {filteredProducts.map((product, index) => (
+          {products.map((product, index) => (
             <div key={product.id}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative group">
