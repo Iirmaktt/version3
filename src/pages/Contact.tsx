@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
       icon: <MapPin className="w-6 h-6" />,
       title: "Adres",
       details: [
-        "Şemsibeyosb Mahallesi, Urartu Caddesi No: 2, Tuşba / Van",
+        "Şemsibeyosb OSB Mahallesi, Urartu Sokak No: 2, Tuşba / Van",
        
       ]
     },
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
       icon: <Mail className="w-6 h-6" />,
       title: "E-posta",
       details: [
-      "sciweld.tech@gmail.com"
+      "nawel.tech@gmail.com"
       ]
     },
     {
@@ -288,7 +288,7 @@ const Contact: React.FC = () => {
               {/* Map Placeholder */}
               <div className="bg-gray-100 rounded-xl h-64 mb-16 ">
                 <div className="text-center">
-                <iframe width="100%" height="255px"  scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%C5%9Eemsibey%20OSB+(Sciweld)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/it/calcola-la-popolazione-su-una-mappa/">città più popolate Italia mappa</a></iframe>
+                <iframe width="100%" height="255px"  scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%C5%9Eemsibey%20OSB+(nawel)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/it/calcola-la-popolazione-su-una-mappa/">città più popolate Italia mappa</a></iframe>
                 
                   <p className="text-gray-400 text-sm">Şemsibeyosb Mahallesi Urartu Caddesi</p>
                   <p className="text-gray-400 text-sm">Tuşba/ Van</p>
@@ -307,7 +307,9 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">Telefon ile arayın</p>
-                      <p className="text-gray-600 text-sm">+98 21 1234 5678</p>
+                      <p className="text-gray-600 text-sm">0539 7695 957
+
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center">
