@@ -215,42 +215,42 @@ const Home: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
-                  name: "nawel CAST",
+                  name: "SCİWELD CAST",
                   description: "Genel amaçlı kaynak uygulamaları için ideal çözüm",
                   specs: "Çap: 0.8-2.4mm, AWS E71T-1 standardı",
                   image: nawelImg,
                   slug: "nawel-cast"
                 },
                 {
-                  name: "nawel TOOL",
+                  name: "SCİWELD TOOL",
                   description: "Dış mekan kaynak işleri için mükemmel performans",
                   specs: "Çap: 1.2-2.0mm, Rüzgar direnci yüksek",
                   image: foto1,
                   slug: "nawel-tool"
                 },
                 {
-                  name: "nawel CORROSION",
+                  name: "SCİWELD CORROSION",
                   description: "316L ve 308L paslanmaz çelik kaynak teli",
                   specs: "Çap: 0.8-1.6mm, Yüksek korozyon direnci",
                   image: foto2,
                   slug: "nawel-corrosion"
                 },
                 {
-                  name: "nawel ABRASION",
+                  name: "SCİWELD ABRASION",
                   description: "Yüksek mukavemet gerektiren uygulamalar için",
                   specs: "Çap: 1.2-2.4mm, 550-700 MPa mukavemet",
                   image: nawelAbrasionImg,
                   slug: "nawel-abrasion"
                 },
                 {
-                  name: "nawel TUNGSTEN CARBIDE",
+                  name: "SCİWELD TUNGSTEN CARBIDE",
                   description: "Ekstrem aşınma koşulları için tungsten karbür takviyeli",
                   specs: "Çap: 1.2-2.4mm, HRC 58-65 sertlik",
                   image: foto3,
                   slug: "nawel-tungsten-carbide"
                 },
                 {
-                  name: "nawel BUILDUP",
+                  name: "SCİWELD BUILDUP",
                   description: "Onarım ve yeniden boyutlandırma işleri için",
                   specs: "Çap: 1.2-2.4mm, Yüksek dolgu oranı",
                   image: nawelBuildupImg,
