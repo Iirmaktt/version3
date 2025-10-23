@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight, Layers, Cpu, Atom, Microscope,
@@ -44,6 +44,8 @@ const getSubProductSlug = (name: string): string => {
 };
 
 const Products: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
+
   const products = [
     {
       id: 1,
@@ -129,11 +131,15 @@ const Products: React.FC = () => {
     { title: "Enerji Sektörü", description: "Güç santrali ve enerji altyapısı", icon: <Atom className="w-6 h-6" /> },
   ];
 
+  const filteredProducts = selectedCategory
+    ? products.filter(p => p.id === selectedCategory)
+    : products;
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-black text-white py-20 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center opacity-25"
           style={{ backgroundImage: `url(${industrialBgImg})` }}
         ></div>
@@ -151,10 +157,42 @@ const Products: React.FC = () => {
         </div>
       </section>
 
+      {/* Category Filter */}
+      <section className="py-8 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap gap-4 justify-center">
+            <button
+              onClick={() => setSelectedCategory(null)}
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                selectedCategory === null
+                  ? 'bg-blue-800 text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+            >
+              Tüm Ürünler
+            </button>
+            {products.map((product) => (
+              <button
+                key={product.id}
+                onClick={() => setSelectedCategory(product.id)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${
+                  selectedCategory === product.id
+                    ? 'bg-blue-800 text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                {product.icon}
+                {product.title}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Products */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
-          {products.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <div key={product.id}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="relative group">
