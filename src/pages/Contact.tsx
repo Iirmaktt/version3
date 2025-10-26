@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
       icon: <Phone className="w-6 h-6" />,
       title: "Telefon",
       details: [
-        "+98 21 1234 5678",
+        "+90 539 769 5957",
         "Pazartesi - Cuma: 09:00 - 18:00"
       ]
     },
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
       icon: <Mail className="w-6 h-6" />,
       title: "E-posta",
       details: [
-      "nawel.tech@gmail.com"
+      "Sciweld.tech@gmail.com"
       ]
     },
     {

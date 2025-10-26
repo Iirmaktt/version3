@@ -81,27 +81,29 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, productName }) => {
       </div>
 
       {/* Küçük önizleme resimleri (thumbnails) */}
-      {images.length > 1 && (
-        <div className="flex space-x-3 overflow-x-auto pb-2">
-          {images.map((image, index) => (
-            <button
-              key={index}
-              onClick={() => setSelectedImageIndex(index)}
-              className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
-                index === selectedImageIndex
-                  ? 'border-blue-600 shadow-lg scale-105'
-                  : 'border-gray-200 hover:border-blue-400'
-              }`}
-            >
-              <img
-                src={image}
-                alt={`${productName} - Önizleme ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </button>
-          ))}
-        </div>
-      )}
+     {/* Küçük önizleme resimleri (thumbnails) */}
+{images.length > 1 && (
+  <div className="flex space-x-4 overflow-x-auto pb-2 px-2"> {/* space-x-3 -> space-x-4 (Aralık artırıldı), px-2 eklendi */}
+    {images.map((image, index) => (
+      <button
+        key={index}
+        onClick={() => setSelectedImageIndex(index)}
+        className={`flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden border-2 transition-all duration-200 ${ /* w-20 h-20 -> w-24 h-24 (Boyut büyütüldü) */
+          index === selectedImageIndex
+            ? 'border-blue-600 shadow-xl scale-100' // scale-105 -> scale-100 (Büyütme kaldırıldı, sadece çerçeve vurgusu için)
+            : 'border-gray-300 hover:border-blue-400' // border-gray-200 -> border-gray-300 (Pasif çerçeve daha belirgin)
+        }`}
+      >
+        {/* EN ÖNEMLİ DÜZELTME: img etiketi ve boyutlandırma sınıfları eklendi */}
+        <img
+          src={image} // images dizisindeki görsel kaynağı
+          alt={`Thumbnail ${index + 1}`}
+          className="w-full h-full object-cover" // Görselin butonu tam kaplamasını sağlar
+        />
+      </button>
+    ))}
+  </div>
+)}
 
       {/* Tam boy görüntüleme modal'ı */}
       {isModalOpen && (
